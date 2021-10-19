@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blanchard</title>
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/simplebar.css">
+	<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+	<link rel="stylesheet" href="/css/swiper-bundle.min.css">
+	<!-- <link rel="stylesheet" href="/css/simplebar.css"> -->
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/effects.css">
+	
+
+	<!-- <script src="/js/simplebar.js"></script> -->
+	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+	<script src="/js/mark.min.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery.mark.min.js"></script>
+	<script src="/js/swiper-bundle.min.js"></script>
+
+	<script defer src="/js/artists.js"></script>
+	<script defer src="/js/scroll.js"></script>
+	<script defer src="/js/swiper.js"></script>
+	<script defer src="/js/search.js"></script>
+	<script defer src="/js/jump-to-search.js"></script>
+	<script defer src="/js/move-background.js"></script>
+	<script defer src="/js/burger.js"></script>
+
+	
+</head>
+<body class="body">
+	<header class="header">
+		<div class="add-swiper-container">
+			<div class="swiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide header__background header__background_castle"></div>
+					<div class="swiper-slide header__background header__background_angels"></div>
+					<div class="swiper-slide header__background header__background_nature"></div>
+				</div>
+			</div>
+			<div class="header__top header-top">
+				<div class="container header-top__container">
+					<button class="btn-reset burger-button" id="burger-button">
+						<span class="burger-button__img"></span>
+					</button>
+					<picture class="header__top-img">
+						<source srcset="/img/Лого_320.png" media=" (max-width: 725px) ">
+						<source srcset="/img/Лого_1024.png" media=" (max-width: 1024px) ">
+						<img src="/img/Лого.png" alt="Логотип галереи Бланчард">
+					</picture>
+					<ul class="header-top__list" id="header-top__list">
+						<li class="header-top__item">
+							<a href="#" class="header-top__link">О нас</a>
+						</li>
+						<li class="header-top__item">
+							<a href="#" class="header-top__link">Галерея</a>
+						</li>
+						<li class="header-top__item">
+							<a href="#" class="header-top__link">Каталог</a>
+						</li>
+						<li class="header-top__item">
+							<a href="#" class="header-top__link">События</a>
+						</li>
+						<li class="header-top__item">
+							<a href="#" class="header-top__link">Издания</a>
+						</li>
+						<li class="header-top__item">
+							<a href="#" class="header-top__link">Проекты</a>
+						</li>
+						<li class="header-top__item">
+							<a href="#" class="header-top__link">Контакты</a>
+						</li>
+					</ul>
+					<a href="#" class="header-top__link-enter">
+						<svg class="header-top__icon-enter" width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5.12056 9.09278L6.13889 10.1111L9.75 6.5L6.13889 2.88889L5.12056 3.90722L6.98389 5.77778H0V7.22222H6.98389L5.12056 9.09278ZM11.5556 0H1.44444C0.642778 0 0 0.65 0 1.44444V4.33333H1.44444V1.44444H11.5556V11.5556H1.44444V8.66667H0V11.5556C0 12.35 0.642778 13 1.44444 13H11.5556C12.35 13 13 12.35 13 11.5556V1.44444C13 0.65 12.35 0 11.5556 0Z" fill="white"/>
+						</svg>
+						Войти
+					</a>
+					<div class="header-top__search search">
+						<button class="btn-reset search__button search__buttop_top">
+							<span class="search__icon"></span>
+						</button>
+						<form class="search__form" id="search__form_top">
+							<input class="search__input" id="search__input_top" autocomplete="off" type="search" placeholder="Поиск по сайту">
+						</form>
+					</div>
+				</div>	
+			</div>
+			<div class="header__bottom header-bottom">
+				<div class="container header-bottom__container">
+					<ul class="header-bottom__list">
+						<li class="header-bottom__item">
+							<button class="header-bottom__button btn-reset header-bottom__button-1">
+								Реализм
+								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 1L6 6L1 1" stroke="white"/>
+								</svg>
+							</button>
+							<div class="header-bottom__option-container header-bottom__option-container-1">
+								<div class="header-bottom__options" id="header-bottom__options-1">
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+								</div>
+							</div>
+						</li>
+						<li class="header-bottom__item">
+							<button class="header-bottom__button btn-reset header-bottom__button-2">
+								Импрессионизм
+								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 1L6 6L1 1" stroke="white"/>
+								</svg>
+							</button>
+							<div class="header-bottom__option-container header-bottom__option-container-2">
+								<div class="header-bottom__options" id="header-bottom__options-2">
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+								</div>
+							</div>
+						</li>
+						<li class="header-bottom__item">
+							<button class="header-bottom__button btn-reset header-bottom__button-3">
+								Постимпрессионизм
+								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 1L6 6L1 1" stroke="white"/>
+								</svg>
+							</button>
+							<div class="header-bottom__option-container header-bottom__option-container-3">
+								<div class="header-bottom__options" id="header-bottom__options-3">
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+								</div>
+							</div>
+						</li>
+						<li class="header-bottom__item">
+							<button class="header-bottom__button btn-reset header-bottom__button-4">
+								Авангард
+								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 1L6 6L1 1" stroke="white"/>
+								</svg>
+							</button>
+							<div class="header-bottom__option-container header-bottom__option-container-4">
+								<div class="header-bottom__options" id="header-bottom__options-4">
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+								</div>
+							</div>
+						</li>
+						<li class="header-bottom__item">
+							<button class="header-bottom__button btn-reset header-bottom__button-5">
+								Футуризм
+								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11 1L6 6L1 1" stroke="white"/>
+								</svg>
+							</button>
+							<div class="header-bottom__option-container header-bottom__option-container-5">
+								<div class="header-bottom__options" id="header-bottom__options-5">
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
+									<span class="header-bottom__img header-bottom__img-fridrih"></span>
+									<span class="header-bottom__img header-bottom__img-leonardo"></span>
+									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<div class="header-bottom__search search">
+						<button class="btn-reset search__button search__button_bot" tabindex="-1">
+							<span class="search__icon"></span>
+						</button>
+						<form class="search__form" id="search__form_bot">
+							<input class="search__input" id="search__input_bot" autocomplete="off" type="search" placeholder="Поиск по сайту">
+						</form>
+					</div>
+				</div>
+			</div>
+			<section class="hero">
+				<div class="container hero__container">
+					<h1 class="main-heading hero__heading">Прикоснитесь к&nbsp;прекрасному</h1>
+					<p class="hero__descr">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.</p>
+					<button class="btn-reset btn hero__btn">Подписаться на рассылку</button>
+				</div>
+			</section>
+			
+		</div>
+	</header>
+	<main>
+		<section class="about-us">
+			<div class="container about-us__container">
+				<h2 class="second-heading about-us__heading">О нас</h2>
+				<p class="main-text about-us__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis a ipsam doloremque iusto sequi tenetur delectus dolorum commodi quas, repudiandae aut dolor incidunt saepe iste quisquam, hic, eligendi veniam architecto.</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis a ipsam doloremque iusto sequi tenetur delectus dolorum commodi quas, repudiandae aut dolor incidunt saepe iste quisquam, hic, eligendi veniam architecto.</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis a ipsam doloremque iusto sequi tenetur delectus dolorum commodi quas, repudiandae aut dolor incidunt saepe iste quisquam, hic, eligendi veniam architecto.</p>
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis a ipsam doloremque iusto sequi tenetur delectus dolorum commodi quas, repudiandae aut dolor incidunt saepe iste quisquam, hic, eligendi veniam овечка.</p>
+			</div>
+		</section>
+		
+	</main>
+	<footer class="footer">
+
+	</footer>
+</body>
+</html>

@@ -1,0 +1,119 @@
+:root {
+	--black: #000;
+	--black-04: rgba(0, 0, 0, 0.4);
+	--white: #fff;
+	--amethyst: #9d5cd0;
+	--grey-black: #333;
+	--royal-purple: #7943a4;
+	--biloba-flower: #d1a9f0;
+	--gallery: #ececec;
+	--heliotrope: #c283f3;
+	--search-form-color: rgba(255, 255, 255, 0.85);
+}
+
+
+
+/* hover */
+@media(min-width: 1025px) {
+	.header-top__link:hover, .header-top__link-enter:hover, .header-bottom__button:hover {
+		color: var(--heliotrope);
+	}
+
+	.header-top__link-enter:hover .header-top__icon-enter path {
+		fill: var(--heliotrope);
+	}
+
+	.header-bottom__button:hover .header-bottom__button-icon path {
+		stroke: var(--heliotrope)
+	}
+
+	.search__form:hover .search__input {
+		border-bottom-color: var(--heliotrope);
+	} 
+
+	.search__form:hover {
+		cursor: url(/img/coursor-hover.svg), pointer;
+	}
+
+  .hero__btn:hover {
+    padding: 22px 37px;
+    border-color: var(--biloba-flower);
+  }
+
+}
+
+
+/* focus-visible */
+.header-top__link::after, .header-top__link-enter::after, .header-bottom__button::before {
+	position: absolute;
+	z-index: -1;
+	content: "";
+	top: -8px;
+	right: -8px;
+	bottom: -8px;
+	left: -8px;
+	background-color: var(--royal-purple);
+	opacity: 0;
+	transition: opacity .3s ease-out;
+}
+
+.hero__btn::after {
+  position: absolute;
+	z-index: 1;
+	content: "";
+	top: -3px;
+	right: -3px;
+	bottom: -3px;
+	left: -3px;
+  border: 3px solid var(--white);
+  border-radius: 100px;
+	opacity: 0;
+	transition: opacity .3s ease-out;
+}
+
+.header-top__link:focus-visible::after, 
+.header-top__link-enter:focus-visible::after, 
+.header-bottom__button:focus-visible::before,
+.hero__btn:focus-visible::after  {
+	opacity: 1;
+}
+
+.search__input:focus {
+	border-bottom-color: var(--heliotrope);
+} 
+
+
+.hero__btn:focus-visible {
+  padding: 20px 35px;
+  border: 5px solid var(--heliotrope);
+}
+
+
+/* active */
+a:active {
+	cursor: url(/img/coursor-active.svg), pointer;
+}
+
+.btn:active {
+	cursor: url(/img/coursor-active.svg), pointer;
+}
+
+.header-top__link:active, .header-top__link-enter:active, .header-bottom__button:active {
+	color: var(--royal-purple);
+}
+
+.header-top__link-enter:active .header-top__icon-enter path {
+	fill: var(--royal-purple);
+}
+
+.header-bottom__button:active .header-bottom__button-icon path {
+	stroke: var(--royal-purple)
+}
+
+.search__form:active .search__input {
+	border-bottom-color: var(--royal-purple);
+} 
+
+.hero__btn:active {
+	background-color: var(--royal-purple);
+ }
