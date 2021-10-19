@@ -149,7 +149,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .swiper {
 	height: 806px;
-	/* animation: blanchard 6s 1s linear infinite alternate; */
+	animation: blanchard 6s 1s linear infinite alternate;
 }
 
 .header-top, .header-bottom, .hero__heading, .hero__descr, .hero__btn {
