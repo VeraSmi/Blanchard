@@ -56,27 +56,4 @@ $(function() {
     });
   });
 
-  /**
-   * Clears the search
-   */
-  $clearBtn.on("click", function() {
-    $content.unmark();
-    $input.val("").focus();
-  });
-
-  /**
-   * Next and previous search jump to
-   */
-  $nextBtn.add($prevBtn).on("click", function() {
-    if ($results.length) {
-      currentIndex += $(this).is($prevBtn) ? -1 : 1;
-      if (currentIndex < 0) {
-        currentIndex = $results.length - 1;
-      }
-      if (currentIndex > $results.length - 1) {
-        currentIndex = 0;
-      }
-      jumpTo();
-    }
-  });
 });

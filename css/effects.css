@@ -57,6 +57,10 @@
 	transition: opacity .3s ease-out;
 }
 
+.hero__btn {
+	position: relative;
+}
+
 .hero__btn::after {
   position: absolute;
 	z-index: 1;
@@ -71,20 +75,22 @@
 	transition: opacity .3s ease-out;
 }
 
-.header-top__link:focus-visible::after, 
-.header-top__link-enter:focus-visible::after, 
-.header-bottom__button:focus-visible::before,
-.hero__btn:focus-visible::after  {
+.header-top__link:focus-visible:not(:active)::after, 
+.header-top__link-enter:focus-visible:not(:active)::after, 
+.header-bottom__button:focus-visible:not(:active)::before,
+.hero__btn:focus-visible:not(:active)::after  {
 	opacity: 1;
 }
 
-.search__input:focus {
+.search__input:focus:not(:active) {
 	border-bottom-color: var(--heliotrope);
 } 
 
 
-.hero__btn:focus-visible {
-  padding: 20px 35px;
+.hero__btn:focus-visible:not(:active) {
+	top: -4px;
+	left: -2px;
+	padding: 24px 36px;
   border: 5px solid var(--heliotrope);
 }
 
@@ -94,7 +100,7 @@ a:active {
 	cursor: url(/img/coursor-active.svg), pointer;
 }
 
-.btn:active {
+.btn:active, .btn-reset:active {
 	cursor: url(/img/coursor-active.svg), pointer;
 }
 
@@ -115,5 +121,11 @@ a:active {
 } 
 
 .hero__btn:active {
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 20px 35px;
 	background-color: var(--royal-purple);
+	border-color: var(--biloba-flower);
  }

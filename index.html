@@ -10,8 +10,9 @@
 	<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
 	<link rel="stylesheet" href="/css/swiper-bundle.min.css">
 	<!-- <link rel="stylesheet" href="/css/simplebar.css"> -->
-	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/effects.css">
+	<link rel="stylesheet" href="/css/choices.min.css">
+	<link rel="stylesheet" href="/css/style.css">
 	
 
 	<!-- <script src="/js/simplebar.js"></script> -->
@@ -20,6 +21,9 @@
 	<script src="/js/jquery.min.js"></script>
 	<script src="/js/jquery.mark.min.js"></script>
 	<script src="/js/swiper-bundle.min.js"></script>
+	<script src="/js/choices.min.js"></script>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
 	<script defer src="/js/artists.js"></script>
 	<script defer src="/js/scroll.js"></script>
@@ -28,13 +32,14 @@
 	<script defer src="/js/jump-to-search.js"></script>
 	<script defer src="/js/move-background.js"></script>
 	<script defer src="/js/burger.js"></script>
+	<script defer src="/js/select-gallery.js"></script>
 
 	
 </head>
 <body class="body">
 	<header class="header">
 		<div class="add-swiper-container">
-			<div class="swiper">
+			<div class="swiper swiper-background">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide header__background header__background_castle"></div>
 					<div class="swiper-slide header__background header__background_angels"></div>
@@ -46,12 +51,15 @@
 					<button class="btn-reset burger-button" id="burger-button">
 						<span class="burger-button__img"></span>
 					</button>
-					<picture class="header__top-img">
+					<picture class="header-top__img">
 						<source srcset="/img/Лого_320.png" media=" (max-width: 725px) ">
 						<source srcset="/img/Лого_1024.png" media=" (max-width: 1024px) ">
 						<img src="/img/Лого.png" alt="Логотип галереи Бланчард">
 					</picture>
-					<ul class="header-top__list" id="header-top__list">
+					<button class="btn-reset header-top__button">
+						<span class="header-top__button-img"></span>
+					</button>
+					<ul class="header-top__list " id="header-top__list">
 						<li class="header-top__item">
 							<a href="#" class="header-top__link">О нас</a>
 						</li>
@@ -84,112 +92,116 @@
 						<button class="btn-reset search__button search__buttop_top">
 							<span class="search__icon"></span>
 						</button>
-						<form class="search__form" id="search__form_top">
+						<form class="search__form" id="search__form_top" onsubmit="return false">
 							<input class="search__input" id="search__input_top" autocomplete="off" type="search" placeholder="Поиск по сайту">
 						</form>
+						<button class="btn-reset search__button-cross-sign">
+							<span class="search__cross-sign-img"></span>
+						</button>
 					</div>
+					<div class="hidden-element"></div>
 				</div>	
 			</div>
 			<div class="header__bottom header-bottom">
 				<div class="container header-bottom__container">
 					<ul class="header-bottom__list">
 						<li class="header-bottom__item">
-							<button class="header-bottom__button btn-reset header-bottom__button-1">
+							<button class="header-bottom__button btn-reset">
 								Реализм
 								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11 1L6 6L1 1" stroke="white"/>
 								</svg>
 							</button>
-							<div class="header-bottom__option-container header-bottom__option-container-1">
+							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-1">
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-realism-1">Тинторетто</span>
+									<span class="header-bottom__img header-bottom__img-realism-2">Фридрих</span>
+									<span class="header-bottom__img header-bottom__img-realism-3">Леонардо</span>
+									<span class="header-bottom__img header-bottom__img-realism-4">Верроккьо</span>
+									<span class="header-bottom__img header-bottom__img-realism-1">Тинторетто</span>
+									<span class="header-bottom__img header-bottom__img-realism-2">Фридрих</span>
+									<span class="header-bottom__img header-bottom__img-realism-3">Леонардо</span>
+									<span class="header-bottom__img header-bottom__img-realism-4">Верроккьо</span>
 								</div>
 							</div>
 						</li>
 						<li class="header-bottom__item">
-							<button class="header-bottom__button btn-reset header-bottom__button-2">
+							<button class="header-bottom__button btn-reset">
 								Импрессионизм
 								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11 1L6 6L1 1" stroke="white"/>
 								</svg>
 							</button>
-							<div class="header-bottom__option-container header-bottom__option-container-2">
+							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-2">
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-impress-1">Моне</span>
+									<span class="header-bottom__img header-bottom__img-impress-2">Сислей</span>
+									<span class="header-bottom__img header-bottom__img-impress-3">Мане</span>
+									<span class="header-bottom__img header-bottom__img-impress-4">Ренуар</span>
+									<span class="header-bottom__img header-bottom__img-impress-1">Моне</span>
+									<span class="header-bottom__img header-bottom__img-impress-2">Сислей</span>
+									<span class="header-bottom__img header-bottom__img-impress-3">Мане</span>
+									<span class="header-bottom__img header-bottom__img-impress-4">Ренуар</span>
 								</div>
 							</div>
 						</li>
 						<li class="header-bottom__item">
-							<button class="header-bottom__button btn-reset header-bottom__button-3">
+							<button class="header-bottom__button btn-reset">
 								Постимпрессионизм
 								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11 1L6 6L1 1" stroke="white"/>
 								</svg>
 							</button>
-							<div class="header-bottom__option-container header-bottom__option-container-3">
+							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-3">
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-postimp-1">Ван Гог</span>
+									<span class="header-bottom__img header-bottom__img-postimp-2">Сезанн</span>
+									<span class="header-bottom__img header-bottom__img-postimp-3">Гоген</span>
+									<span class="header-bottom__img header-bottom__img-postimp-4">Сёра</span>
+									<span class="header-bottom__img header-bottom__img-postimp-1">Ван Гог</span>
+									<span class="header-bottom__img header-bottom__img-postimp-2">Сезанн</span>
+									<span class="header-bottom__img header-bottom__img-postimp-3">Гоген</span>
+									<span class="header-bottom__img header-bottom__img-postimp-4">Сёра</span>
 								</div>
 							</div>
 						</li>
 						<li class="header-bottom__item">
-							<button class="header-bottom__button btn-reset header-bottom__button-4">
+							<button class="header-bottom__button btn-reset">
 								Авангард
 								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11 1L6 6L1 1" stroke="white"/>
 								</svg>
 							</button>
-							<div class="header-bottom__option-container header-bottom__option-container-4">
+							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-4">
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-avangard-1">Кандинский</span>
+									<span class="header-bottom__img header-bottom__img-avangard-2">Маринетти</span>
+									<span class="header-bottom__img header-bottom__img-avangard-3">Малевич</span>
+									<span class="header-bottom__img header-bottom__img-avangard-4">Пикассо</span>
+									<span class="header-bottom__img header-bottom__img-avangard-1">Кандинский</span>
+									<span class="header-bottom__img header-bottom__img-avangard-2">Маринетти</span>
+									<span class="header-bottom__img header-bottom__img-avangard-3">Малевич</span>
+									<span class="header-bottom__img header-bottom__img-avangard-4">Пикассо</span>
 								</div>
 							</div>
 						</li>
 						<li class="header-bottom__item">
-							<button class="header-bottom__button btn-reset header-bottom__button-5">
+							<button class="header-bottom__button btn-reset">
 								Футуризм
 								<svg class="header-bottom__button-icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M11 1L6 6L1 1" stroke="white"/>
 								</svg>
 							</button>
-							<div class="header-bottom__option-container header-bottom__option-container-5">
+							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-5">
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
-									<span class="header-bottom__img header-bottom__img-tintoretto"></span>
-									<span class="header-bottom__img header-bottom__img-fridrih"></span>
-									<span class="header-bottom__img header-bottom__img-leonardo"></span>
-									<span class="header-bottom__img header-bottom__img-verrokko"></span>
+									<span class="header-bottom__img header-bottom__img-futurism-1">Карра</span>
+									<span class="header-bottom__img header-bottom__img-futurism-2">Прателла</span>
+									<span class="header-bottom__img header-bottom__img-futurism-3">Северини</span>
+									<span class="header-bottom__img header-bottom__img-futurism-4">Балла</span>
+									<span class="header-bottom__img header-bottom__img-futurism-1">Карра</span>
+									<span class="header-bottom__img header-bottom__img-futurism-2">Прателла</span>
+									<span class="header-bottom__img header-bottom__img-futurism-3">Северини</span>
+									<span class="header-bottom__img header-bottom__img-futurism-4">Балла</span>
 								</div>
 							</div>
 						</li>
@@ -198,7 +210,7 @@
 						<button class="btn-reset search__button search__button_bot" tabindex="-1">
 							<span class="search__icon"></span>
 						</button>
-						<form class="search__form" id="search__form_bot">
+						<form class="search__form" id="search__form_bot" onsubmit="return false" >
 							<input class="search__input" id="search__input_bot" autocomplete="off" type="search" placeholder="Поиск по сайту">
 						</form>
 					</div>
@@ -211,7 +223,6 @@
 					<button class="btn-reset btn hero__btn">Подписаться на рассылку</button>
 				</div>
 			</section>
-			
 		</div>
 	</header>
 	<main>
@@ -221,8 +232,69 @@
 				<p class="main-text about-us__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
 			</div>
 		</section>
+		<section class="gallery">
+			<div class="container gallery__container">
+				<div class="gallery__left">
+					<div class="gallery__left-top">
+						<h2 class="second-heading gallery__heading">Галерея</h2>
+					<p class="main-text gallery__hint">Фильтр:</p>
+					<select name="style" id="style" class="main-text gallery__select is-open">
+						<option class="gallery__option" value="Живопись" selected>Живопись</option>
+						<option class="gallery__option" value="Рисунок">Рисунок</option>
+						<option class="gallery__option" value="Скульптура">Скульпутра</option>
+					</select>
+					<select name="style-320" id="style-320" class="main-text gallery__select">
+						<option class="gallery__option" value="Живопись" selected>Автор</option>
+						<option class="gallery__option" value="Рисунок">Направление</option>
+						<option class="gallery__option" value="Скульптура">Техника</option>
+					</select>		
+					</div>
+					<p class="main-text gallery__auth">Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний 
+						<a href="#" class="main-text gallery__auth-link">авторизуйтесь</a>, либо воспользуйтесь лицензией. </p>
+				
+				</div>
+				<div class="swiper gallery__swiper">
+					<div class="swiper-btns">
+						<!-- If we need navigation buttons -->
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+						<!-- Pagination -->
+						<div class="swiper-pagination-gallery"></div>
+					</div>
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-1"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-2"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-3"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-4"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-5"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-6"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-7"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-8"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-9"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-10"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-11"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-12"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-13"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-14"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-15"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-16"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-17"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-18"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-19"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-20"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-21"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-22"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-23"></div>
+						<div class="swiper-slide swiper-slide__img swiper-slide__img-gallery-24"></div>
+					</div> 
+				</div>					
+			</div> 
+		</section>
 		
 	</main>
+
 	<footer class="footer">
 
 	</footer>

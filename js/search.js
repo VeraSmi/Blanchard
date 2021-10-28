@@ -1,30 +1,22 @@
 window.addEventListener('DOMContentLoaded' , function() {
+   form = document.querySelector('.search__form');
+   input = document.querySelector('#search__input_top');
+
    document.querySelector('.search__button').addEventListener('click', function() {
         document.querySelector('#search__form_top').classList.toggle('is-open');
         document.querySelector('.header-top__search').classList.toggle('is-open');
+        document.querySelector('.search__button-cross-sign').classList.toggle('is-open');
+        document.querySelector('.hidden-element').classList.toggle('display');
+      //   document.querySelector('.header-top__img').classList.toggle('display-none');
+        input.value = "";
    })
+   document.querySelector('.search__button-cross-sign').addEventListener('click', function() {
+      document.querySelector('.search__button-cross-sign').classList.toggle('is-open');
+      document.querySelector('#search__form_top').classList.toggle('is-open');
+      document.querySelector('.header-top__search').classList.toggle('is-open');
+      document.querySelector('.hidden-element').classList.toggle('display');
+      // document.querySelector('.header-top__img').classList.toggle('display-none');
+      input.value = "";
+
+ })
 })
-
- // var context = document.querySelector(".body"); // requires an element with class "context" to exist
-    // var instance = new Mark(context);
-    // var position;
-
-    // document.querySelector('.search__button_bot').addEventListener('click', function () {
-    //     keyword = document.querySelector('#search__input_bot').value;
-    //     console.log(keyword);
-    //     instance.mark(keyword); 
-    // })
-
-    // document.querySelector('#search__form_bot').addEventListener('submit' , function() {
-    //     keyword = document.querySelector('#search__input_bot').value;
-    //     console.log(keyword);
-    //     instance.mark(keyword);
-    // })
-
-    // $( "#search__form_bot" ).submit(function(event) {
-    //     event.preventDefault();
-    //   });
-    
-    // document.querySelector('#search__input_bot').addEventListener('input' , function() {
-    //     instance.unmark(); 
-    // })
