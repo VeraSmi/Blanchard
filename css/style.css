@@ -600,6 +600,7 @@ mark {
 
 .swiper-btns {
 	position: relative;	
+	z-index: 10;
 	display: flex;
 	margin-bottom: 86px;
 }
@@ -1108,6 +1109,7 @@ mark {
 	}
 
 	.gallery__swiper {
+		z-index: 6;
 		margin-top: 188px;
 		max-width: unset;
 		width: 100%;
@@ -1311,11 +1313,11 @@ mark {
 	}
 
 	.gallery__swiper{
-		height: 51%;
+		height: 52%;
 	 }
 	 
 	.gallery__swiper .swiper-wrapper {
-		height: 84%;
+		height: 83%;
 	}
 
 	.gallery__swiper .swiper-slide {
