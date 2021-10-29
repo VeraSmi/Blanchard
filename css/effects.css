@@ -40,6 +40,22 @@
     border-color: var(--biloba-flower);
   }
 
+	.swiper-button-next:hover,
+	.swiper-button-prev:hover {
+		cursor: url(/img/coursor-hover.svg), pointer;
+}
+
+	.swiper-button-next:hover::after {
+		content: url(/img/next-hover.svg);
+	}
+
+	.swiper-button-prev:hover::after {
+		content: url(/img/prev-hover.svg);
+	}
+
+	.gallery__select:hover, option:hover {
+		cursor: url(/img/coursor-hover.svg), pointer;
+}
 }
 
 
@@ -86,7 +102,6 @@
 	border-bottom-color: var(--heliotrope);
 } 
 
-
 .hero__btn:focus-visible:not(:active) {
 	top: -4px;
 	left: -2px;
@@ -94,6 +109,13 @@
   border: 5px solid var(--heliotrope);
 }
 
+.swiper-button-next:focus-visible::after {
+	content: url(/img/next-focus.svg);
+}
+
+.swiper-button-prev:focus-visible::after {
+	content: url(/img/prev-focus.svg);
+}
 
 /* active */
 a:active {
@@ -129,3 +151,16 @@ a:active {
 	background-color: var(--royal-purple);
 	border-color: var(--biloba-flower);
  }
+
+.swiper-button-next:active,
+.swiper-button-prev:active {
+	cursor: url(/img/coursor-active.svg), pointer;
+}
+
+.swiper-button-next:active::after {
+	content: url(/img/next-active.svg);
+}
+
+.swiper-button-prev:active::after {
+	content: url(/img/prev-active.svg);
+}

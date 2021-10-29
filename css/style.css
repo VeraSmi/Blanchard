@@ -582,6 +582,10 @@ mark {
 	color: var(--amethyst);
 }
 
+.gallery__auth-link:focus-visible {
+	color: var(--biloba-flower);
+}
+
 .gallery__swiper {
 	margin-right: unset;
 	margin-left: unset;
@@ -602,37 +606,34 @@ mark {
 	position: relative;	
 	z-index: 10;
 	display: flex;
-	margin-bottom: 86px;
+	margin-bottom: 65px;
+	padding-left: 2px;
 }
 
 .swiper-button-next,
 .swiper-button-prev{
-	opacity: 1;
+	position: relative;
 	top: 40px;
-	/* right: unset;
-	left: unset; */
+	opacity: 1;
 }
 
-.swiper-button-next {
-	left: 102px;
+.swiper-button-prev, .swiper-rtl .swiper-button-next, .swiper-button-next, .swiper-rtl .swiper-button-prev {
+	left: unset;
+	right: unset;
 }
 
 .swiper-button-prev {
-	left: 2px;
+ margin-right: 20px;
 }
 
-.swiper-button-next:after {
-	content: url(/img/next.svg);
-}
-
-.swiper-button-prev:after {
-	content: url(/img/prev.svg);
+.swiper-button-next:after, .swiper-button-prev:after {
+	display: none;
 }
 
 .swiper-pagination-gallery {
-	position: absolute;
+	position: relative;
 	top: 33px;
-	left: 50px;
+	margin-right: 22px;
 	color: var(--white);
 }
 
@@ -640,7 +641,8 @@ mark {
 .swiper-pagination-bullets.swiper-pagination-horizontal, 
 .swiper-pagination-custom, 
 .swiper-pagination-fraction {
-	width: 50px;
+	width: auto;
+	text-align: center;
 }
 
 .swiper-slide__img {
@@ -752,6 +754,7 @@ mark {
 	display: none;
 }
 
+
 .choices .choices__list .choices__item.is-selected  {
   display: none; 
 }
@@ -842,10 +845,13 @@ mark {
 		margin-bottom: -4px;
 	}
 
-	.choices .choices__inner, .choices .choices__list--dropdown {
+	.choices .choices__inner {
 		width: 300px;
 	}
 
+	.choices .choices__list--dropdown {
+		width: 310px;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -1346,22 +1352,17 @@ mark {
 		margin-bottom: 0;
 	}
 
-	.swiper-btns .swiper-button-prev, .swiper-btns .swiper-button-next, .swiper-btns .swiper-pagination-gallery {
-		position: relative;
+	.swiper-button-prev, .swiper-button-next {
 		top: 36px;
 	}
 
-	.swiper-button-next {
-		left: 61px;
-	}
-
 	.swiper-button-prev {
-		left: -12px;
+		margin-right: 13px;
 	}
 
 	.swiper-btns .swiper-pagination-gallery {
 		top: 30px;
-		left: -23px
+		margin-right: 16px;
 	}
 
 }
