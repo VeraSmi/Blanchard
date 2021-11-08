@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const gallerySwiper = new Swiper(".gallery__swiper", {
     slidesPerView: 3,
     slidesPerGroup: 1,
+    keyboard: {
+      enabled: true,
+    },
     grid: {
       rows: 2
     },

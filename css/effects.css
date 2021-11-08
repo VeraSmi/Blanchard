@@ -1,4 +1,4 @@
-:root {
+	:root {
 	--black: #000;
 	--black-04: rgba(0, 0, 0, 0.4);
 	--white: #fff;
@@ -10,8 +10,6 @@
 	--heliotrope: #c283f3;
 	--search-form-color: rgba(255, 255, 255, 0.85);
 }
-
-
 
 /* hover */
 @media(min-width: 1025px) {
@@ -36,26 +34,34 @@
 	}
 
   .hero__btn:hover {
-    padding: 22px 37px;
     border-color: var(--biloba-flower);
   }
 
 	.swiper-button-next:hover,
-	.swiper-button-prev:hover {
+	.swiper-button-prev:hover,
+	.gallery__swiper .swiper-slide:hover {
 		cursor: url(/img/coursor-hover.svg), pointer;
 }
 
-	.swiper-button-next:hover::after {
-		content: url(/img/next-hover.svg);
-	}
-
-	.swiper-button-prev:hover::after {
-		content: url(/img/prev-hover.svg);
-	}
-
-	.gallery__select:hover, option:hover {
-		cursor: url(/img/coursor-hover.svg), pointer;
+	.swiper-button-next:hover svg .background,
+	.swiper-button-prev:hover svg .background {
+		fill: var(--biloba-flower);
 }
+
+	.gallery__swiper .swiper-slide:hover::before {
+		top: 25px;
+		right: 25px;
+		bottom: 25px;
+		left: 25px;
+		background-color: var(--black-05);
+		background-image: url('/img/magnyfier.svg');
+		background-size: 30%;
+		background-position: center;
+		background-repeat: no-repeat;
+		outline: transparent;	
+		opacity: 1;
+	}
+
 }
 
 
@@ -77,44 +83,41 @@
 	position: relative;
 }
 
-.hero__btn::after {
-  position: absolute;
-	z-index: 1;
+.hero__btn::before {
 	content: "";
-	top: -3px;
-	right: -3px;
-	bottom: -3px;
-	left: -3px;
-  border: 3px solid var(--white);
-  border-radius: 100px;
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	bottom: -8px;
+	left: -8px;
+	background-color: transparent;
+	border: 2px solid var(--heliotrope);
+	border-radius: 100px;
 	opacity: 0;
-	transition: opacity .3s ease-out;
 }
 
-.header-top__link:focus-visible:not(:active)::after, 
-.header-top__link-enter:focus-visible:not(:active)::after, 
-.header-bottom__button:focus-visible:not(:active)::before,
-.hero__btn:focus-visible:not(:active)::after  {
+.header-top__link.focus-visible::after, 
+.header-top__link-enter.focus-visible::after, 
+.header-bottom__button.focus-visible::before,
+.hero__btn.focus-visible::after  {
 	opacity: 1;
 }
 
-.search__input:focus:not(:active) {
+.search__input.focus-visible {
 	border-bottom-color: var(--heliotrope);
 } 
 
-.hero__btn:focus-visible:not(:active) {
-	top: -4px;
-	left: -2px;
-	padding: 24px 36px;
-  border: 5px solid var(--heliotrope);
+.hero__btn.focus-visible::before {
+	opacity: 1;
 }
 
-.swiper-button-next:focus-visible::after {
-	content: url(/img/next-focus.svg);
+.swiper-button-next.focus-visible svg .outline,
+.swiper-button-prev.focus-visible svg .outline {
+	stroke: var(--amethyst);
 }
 
-.swiper-button-prev:focus-visible::after {
-	content: url(/img/prev-focus.svg);
+.gallery__swiper .swiper-slide.focus-visible .swiper-slide-border::before{
+	opacity: 1;
 }
 
 /* active */
@@ -143,24 +146,22 @@ a:active {
 } 
 
 .hero__btn:active {
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	padding: 20px 35px;
 	background-color: var(--royal-purple);
 	border-color: var(--biloba-flower);
  }
 
 .swiper-button-next:active,
-.swiper-button-prev:active {
+.swiper-button-prev:active,
+.gallery__swiper .swiper-slide:active {
 	cursor: url(/img/coursor-active.svg), pointer;
 }
 
-.swiper-button-next:active::after {
-	content: url(/img/next-active.svg);
+.swiper-button-next:active svg .outline,
+.swiper-button-prev:active svg .outline{
+	stroke: var(--amethyst);
 }
 
-.swiper-button-prev:active::after {
-	content: url(/img/prev-active.svg);
+.gallery__swiper .swiper-slide:active::after {
+	opacity: 1;
 }
+
