@@ -30,7 +30,7 @@
 	} 
 
 	.search__form:hover {
-		cursor: url(/img/coursor-hover.svg), pointer;
+		cursor: url(/img/cursor-hover.svg), pointer;
 	}
 
   .hero__btn:hover {
@@ -40,12 +40,17 @@
 	.swiper-button-next:hover,
 	.swiper-button-prev:hover,
 	.gallery__swiper .swiper-slide:hover {
-		cursor: url(/img/coursor-hover.svg), pointer;
+		cursor: url(/img/cursor-hover.svg), pointer;
 }
 
 	.swiper-button-next:hover svg .background,
 	.swiper-button-prev:hover svg .background {
-		fill: var(--biloba-flower);
+		fill: var(--amethyst);
+}
+
+	.swiper-button-next:hover svg .outline,
+	.swiper-button-prev:hover svg .outline {
+		stroke: var(--amethyst);
 }
 
 	.gallery__swiper .swiper-slide:hover::before {
@@ -60,6 +65,33 @@
 		background-repeat: no-repeat;
 		outline: transparent;	
 		opacity: 1;
+	}
+
+	.catalog .cursor:hover {
+		cursor: url(/img/cursor-black-hover.png), pointer;
+	}
+
+	.tabs-country__btn:hover:not(:active) .catalog-top__img-itself {
+		filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+	}
+
+	.tabs-artist__btn::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 4px;
+		left: 0;
+		border-bottom: 1px solid var(--amethyst);
+		opacity: 0;
+	}
+
+	.accordion-catalog__item:hover:not(:active) .tabs-artist__btn::after{ 
+		opacity: 1;
+	}
+
+	.accordion-catalog__item:hover:not(:active) .tabs-artist__btn {
+		color: var(--amethyst);
 	}
 
 }
@@ -113,20 +145,30 @@
 
 .swiper-button-next.focus-visible svg .outline,
 .swiper-button-prev.focus-visible svg .outline {
-	stroke: var(--amethyst);
+	stroke: var(--black);
 }
 
 .gallery__swiper .swiper-slide.focus-visible .swiper-slide-border::before{
 	opacity: 1;
 }
 
+.tabs-country__btn.focus-visible  .catalog-top__img {
+	filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+}
+
+.tabs-artist__btn.focus-visible {
+	color: var(--white);
+	background-color: var(--amethyst);
+}
+
+
 /* active */
 a:active {
-	cursor: url(/img/coursor-active.svg), pointer;
+	cursor: url(/img/cursor-active.svg), pointer;
 }
 
 .btn:active, .btn-reset:active {
-	cursor: url(/img/coursor-active.svg), pointer;
+	cursor: url(/img/cursor-active.svg), pointer;
 }
 
 .header-top__link:active, .header-top__link-enter:active, .header-bottom__button:active {
@@ -153,15 +195,60 @@ a:active {
 .swiper-button-next:active,
 .swiper-button-prev:active,
 .gallery__swiper .swiper-slide:active {
-	cursor: url(/img/coursor-active.svg), pointer;
+	cursor: url(/img/cursor-active.svg), pointer;
 }
 
 .swiper-button-next:active svg .outline,
 .swiper-button-prev:active svg .outline{
-	stroke: var(--amethyst);
+	stroke: var(--black);
+}
+
+.swiper-button-next:active svg .background,
+.swiper-button-prev:active svg .background {
+	fill: var(--royal-purple);
 }
 
 .gallery__swiper .swiper-slide:active::after {
 	opacity: 1;
 }
 
+.catalog .cursor:active {
+	cursor: url(/img/cursor-black-active.png), pointer;
+}
+
+.catalog-top__img::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border: 2px solid var(--amethyst);
+	border-radius: 100px;
+	opacity: 0;
+}
+
+.tabs-country__btn:active .catalog-top__img::after {
+		opacity: 1;
+}
+
+.catalog-top__img::before {
+	content: '';
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	bottom: -8px;
+	left: -8px;
+	border: 2px solid var(--amethyst);
+	border-radius: 100px;
+	opacity: 0;
+}
+
+.tabs-country__btn.active .catalog-top__img::before {
+		opacity: 1;
+}
+
+.tabs-artist__btn.active, .tabs-artist__btn:active {
+	color: var(--royal-purple);
+	border-bottom-color: transparent;
+}

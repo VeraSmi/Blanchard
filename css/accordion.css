@@ -1,0 +1,255 @@
+:root {
+	--black: #000;
+	--black-04: rgba(0, 0, 0, 0.4);
+	--black-05: rgba(0, 0, 0, 0.5);
+	--black-06: rgba(0, 0, 0, 0.6);
+	--black-09: rgba(0, 0, 0, 0.9);
+	--white: #fff;
+	--amethyst: #9d5cd0;
+	--grey-black: #333;
+	--royal-purple: #7943a4;
+	--biloba-flower: #d1a9f0;
+	--gallery: #ececec;
+	--heliotrope: #c283f3;
+	--heliotrope-04: rgba(194, 131, 243, 0.4);
+	--search-form-color: rgba(255, 255, 255, 0.85);
+	--light-grey: #999;
+  --grey-accordion: #cacaca;
+}
+
+.ui-accordion {
+  position: relative;
+}
+
+.ui-accordion-header-icon {
+  display: none;
+}
+
+.ui-accordion .ui-accordion-content, .ui-accordion .ui-accordion-header {
+  font-family: 'OpenSans', sans-serif;
+} 
+
+.ui-accordion .ui-accordion-header {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-top: -1px;
+  padding: 0;
+  padding-top: 32px;
+  padding-bottom: 35px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  border-top: 1px solid var(--grey-accordion);
+  border-bottom: 1px solid var(--grey-accordion);
+}
+
+#last-acc-content {
+  border-bottom: 1px solid var(--grey-accordion); 
+}
+
+.ui-accordion .ui-accordion-content {
+  padding: 0;
+  padding-top: 13px;
+  padding-bottom: 16px;
+}
+
+.ui-widget-content {
+  border: none;
+}
+
+.ui-corner-all, 
+.ui-corner-top, 
+.ui-corner-right, 
+.ui-corner-tr, 
+.ui-corner-left, 
+.ui-corner-tl, 
+.ui-corner-all, 
+.ui-corner-bottom, 
+.ui-corner-right, 
+.ui-corner-br,
+.ui-corner-left, 
+.ui-corner-bl {
+  border-radius: 0;
+}
+
+.ui-state-default, 
+.ui-widget-content .ui-state-default, 
+.ui-widget-header .ui-state-default {
+  border: none;
+  background: transparent;
+  color: var(--grey-black);
+}
+
+/* .ui-state-focus, 
+.ui-widget-content .ui-state-focus, 
+.ui-widget-header .ui-state-focus {
+  color: var(--white);
+} */
+
+.ui-state-hover {
+  transition: border-color .3s ease-in-out;
+}
+
+.ui-state-hover, 
+.ui-widget-content .ui-state-hover, 
+.ui-widget-header .ui-state-hover {
+  color: var(--amethyst);
+}
+
+.ui-accordion .ui-state-hover {
+  border-color: var(--amethyst);
+  z-index: 2;
+}
+
+.ui-accordion .ui-accordion-header {
+  cursor: url(/img/cursor-black-hover.png), pointer;
+}
+
+.ui-accordion .ui-accordion-header-active {
+  cursor: url(/img/cursor-black-active.png), pointer;
+}
+
+.accordion-catalog__top svg .background{
+  transition: fill .3s ease-in-out;
+}
+
+.accordion-catalog__top:hover svg .background{
+  fill: var(--biloba-flower);
+}
+
+.accordion-catalog__heading {
+  transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+
+.accordion-catalog__top.focus-visible .accordion-catalog__heading {
+	background-color: var(--amethyst);
+	color: var(--white);
+}
+
+.accordion-catalog__top.focus-visible svg .background {
+  transition: fill .3s ease-in-out;
+}
+
+.accordion-catalog__top.focus-visible svg {
+  fill: var(--biloba-flower);
+}
+
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-accordion .ui-widget-header .ui-state-active { 
+  color: var(--royal-purple);
+}
+
+.ui-accordion .ui-state-active svg {
+  fill: var(--biloba-flower);
+  transform: rotate(180deg);
+}
+
+.ui-accordion .ui-state-active svg, .ui-accordion .ui-state-focus svg {
+  width: 48px;
+  height: 48px;
+}
+
+.ui-accordion .ui-state-active .border{
+  stroke: var(--royal-purple);
+}
+
+.ui-widget-content a {
+  color: var(--amethyst);
+}
+
+.accordion-catalog__top:nth-child(3) {
+  padding-top: 40px;
+  padding-bottom: 27px;
+}
+
+.accordion-catalog__top:nth-child(5) {
+  padding-bottom: 27px;
+}
+
+.accordion-catalog__top:nth-child(7) {
+  padding-bottom: 33px;
+}
+
+.accordion-catalog__top:nth-child(9) {
+  padding-top: 21px;
+  padding-bottom: 33px;
+}
+
+.accordion-catalog__top:nth-child(11) {
+  padding-bottom: 33px;
+}
+
+.accordion-catalog__top:nth-child(13) {
+  padding-top: 21px;
+  padding-bottom: 33px;
+}
+
+.ui-widget button {
+  font-family: 'OpenSans', sans-serif;
+  font-weight: normal;
+	font-size: 16px;
+	line-height: 32px;
+	color: var(--grey-black);
+}
+
+@media (max-width: 1024px) {
+  .ui-accordion .ui-accordion-header {
+		padding-bottom: 28px;
+	}
+
+	.ui-accordion .ui-accordion-content {
+		padding-top: 23px;
+	}
+
+	.accordion-catalog__top:nth-child(3) {
+		padding-top: 32px;
+	}
+
+	.accordion-catalog__top:nth-child(7) {
+		padding-bottom: 27px;
+	}
+
+	.accordion-catalog__top:nth-child(9) {
+		padding-top: 29px;
+		padding-bottom: 30px;
+	}
+
+	.accordion-catalog__top:nth-child(11) {
+		padding-bottom: 27px;
+	}
+
+	.accordion-catalog__top:nth-child(13) {
+		padding-top: 26px;
+	}
+}
+
+@media (max-width: 768px) {
+  .ui-accordion .ui-accordion-content {
+    padding-bottom: 19px;
+  }
+
+  .accordion-catalog__top:nth-child(13) {
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 725px) {
+  .ui-accordion .ui-accordion-header {
+    padding-top: 21px;
+    padding-bottom: 19px;
+    font-size: 18px;
+  }
+
+  .ui-accordion .ui-accordion-content {
+    padding-top: 19px;
+    padding-bottom: 21px;
+  }
+
+  .ui-accordion .ui-state-active svg, .ui-accordion .ui-state-focus svg {
+    width: 30px;
+    height: 30px;
+  }
+
+}
