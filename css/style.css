@@ -601,7 +601,7 @@ mark {
 	margin-bottom: 10px;
 	padding-right: 3px;
 	padding-left: 3px;
-	max-width: 1156px;
+	max-width: 1148px;
   width: 100%;
 }
 
@@ -659,8 +659,26 @@ mark {
 	position: relative;	
 	z-index: 10;
 	display: flex;
-	margin-bottom: 65px;
-	padding-left: 2px;
+	margin-bottom: 69px;
+	padding-left: 1px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	top: 47px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+	width: 32px;
+	height: 32px;
+}
+
+.swiper-button-next svg,
+.swiper-button-prev svg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .swiper-button-next svg .outline,
@@ -672,7 +690,7 @@ mark {
 .swiper-button-next,
 .swiper-button-prev{
 	position: relative;
-	top: 40px;
+	top: 47px;
 	opacity: 1;
 }
 
@@ -685,7 +703,7 @@ mark {
 }
 
 .swiper-button-prev {
- 	margin-right: 20px;
+ 	margin-right: 17px;
 }
 
 .swiper-button-next svg .background, 
@@ -706,7 +724,7 @@ mark {
 .swiper-pagination-gallery {
 	position: relative;
 	top: 33px;
-	margin-right: 22px;
+	margin-right: 8px;
 	color: var(--white);
 }
 
@@ -985,7 +1003,7 @@ mark {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	max-height: 328px;
+	max-height: 318px;
 }
 
 /* .accordion-catalog__artists {
@@ -1052,7 +1070,163 @@ mark {
 	display: block;
 }
 
+/* events */
+.events__container {
+	padding-bottom: 80px;
+}
+
+.events__heading {
+	margin-bottom: 15px;
+}
+
+.events__list {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.events__img {
+	margin-bottom: -1px;
+}
+
+.events__item-top {
+	width: 100%;
+	height: 300px;
+}
+
+.events__img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.events__item-bottom {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	flex: 1;
+	padding-top: 13px;
+	padding-right: 19px;
+	padding-left: 50px;
+	padding-bottom: 48px;
+	border: 1px solid var(--grey-accordion);
+	border-top-color: transparent;
+}
+
+.events__location {
+	margin-left: auto;
+	margin-bottom: 8px;
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--light-grey);
+	text-align: right;
+	white-space: pre-line;
+}
+
+.events__item-heading {
+	margin-bottom: 1px;
+	font-size: 24px;
+	line-height: 32px;
+}
+
+.events__descr {
+	margin-bottom: 122px;
+}
+
+.events__link {
+	position: relative;
+	margin-top: auto;
+	color: var(--amethyst);
+}
+
+.events__link::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: -4px;
+	left: 0;
+	border-bottom: 1px solid var(--amethyst);
+}
+
+.events__link::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	top: -4px;
+	right: -8px;
+	bottom: -12px;
+	left: -8px;
+	background-color: var(--amethyst);
+	opacity: 0;
+}
+
+.events__btn-container {
+	display: none;
+}
+
+.events__btn {
+	position: relative;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	color: var(--amethyst);
+	background-color: transparent;
+	border: 2px solid var(--amethyst);
+}
+
+.events__btn::before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	bottom: -5px;
+	left: -5px;
+	background-color: transparent;
+	border: 2px solid var(--heliotrope);
+	border-radius: 100px;
+	opacity: 0;
+}
+
+/* events-slider */
+
+.events__swiper {
+	padding-bottom: 50px;
+}
+
+
 /* media */
+
+@media (min-width: 726px) {
+	.events__item {	
+		display: flex;
+		flex-direction: column;
+		width: calc((100% - 48px * 2 - 6px) / 3 );
+	}
+	
+	.events__item:not(:nth-child(3n)) {
+		margin-right: 50px;
+	}
+	
+	.events__item:nth-child(5) {
+		margin-right: auto;
+	}
+	
+	.events__item:nth-child(-n+3){
+		margin-bottom: 46px;
+	}
+	
+	.events__item:not(:nth-child(-n+3)) {
+		display: none;
+	}
+
+	.events__swiper {
+		padding-bottom: 0;
+	}
+
+	.events__btn-container {
+		display: flex;
+		justify-content: center;
+	}
+}
 
 @media(max-width: 1890px) {
 	.container {
@@ -1095,6 +1269,7 @@ mark {
 	.accordion-catalog__artists {
 		max-height: 428px;
 	}
+
 }
 
 @media (max-width: 1024px) {
@@ -1135,7 +1310,7 @@ mark {
 
 	.header-top__img {
 		position: relative;
-		left: -8px;
+		left: 6px;
 		margin-right: unset;
 	}
 
@@ -1287,16 +1462,20 @@ mark {
 		padding-bottom: 67px;
 	}
 
+	.gallery__left {
+		margin-right: 28px;
+	}
+
 	.gallery__swiper .swiper-wrapper {
 		height: 610px;
 	}
 
 	.choices .choices__inner {
-		width: 100%;
+		width: 89%;
 	}
 
 	.choices .choices__list--dropdown {
-		width: calc(100% + 10px);
+		width: calc(89% + 10px);
 	}
 
 	.catalog-top__list {
@@ -1315,6 +1494,7 @@ mark {
 
 	.catalog-bot-left__img-container {
 		height: 274px;
+		width: 95%;
 	}
 
 	.catalog-bot__right {
@@ -1323,6 +1503,10 @@ mark {
 
 	.accordion-catalog__top {
 		width: 100%;
+	}
+
+	.accordion-catalog__artists {
+		max-height: 410px;
 	}
 
 	.artists-not-ready__right {
@@ -1341,6 +1525,33 @@ mark {
 		left: 8px;
 	}
 
+	.events__item {
+		width: calc((100% - 25px * 2 - 6px) / 3 );
+	}
+
+	.events__item:nth-child(-n+3) {
+		margin-bottom: 48px;
+	}
+
+	.events__item:not(:nth-child(3n)) {
+		margin-right: 28px;
+	}
+
+	.events__item-top {
+		height: 200px;
+	}
+
+	.events__item-bottom {
+		padding-left: 34px;
+	}
+
+	.events__descr {
+		margin-bottom: 68px;
+	}
+
+	.events__item-bottom {
+		padding-bottom: 54px;
+	}
 }
 
 @media (max-width: 910px) {
@@ -1372,9 +1583,35 @@ mark {
 		bottom: 12px;
 		left: 12px;
 	}
-}
 
-@media (max-width: 768px) {
+	.events__item {
+		width: calc((100% - 34px - 4px) / 2 );
+	}
+
+	.events__item:not(:nth-child(3n)){
+		margin-right: 0;
+	}
+
+	.events__item:not(:nth-child(2n)){
+		margin-right: 30px;
+	}
+
+	.events__item:not(:nth-child(-n+3)) {
+		display: block;
+	}
+
+	/* .events__item-top {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+	} */
+
+	.events__item:not(:nth-child(-n+2)) {
+		display: none;
+	}
+
+/* media 768 */
+
 	.header-top__img {
 		left: 6px;
 	}
@@ -1459,6 +1696,10 @@ mark {
 		width: 280px;
 	}
 
+	.catalog__container {
+		padding-bottom: 71px;
+	}
+
 	.catalog-top__list {
 		margin-left: 1px;
 		padding-top: 8px;
@@ -1471,7 +1712,25 @@ mark {
 	.catalog__descr {
 		margin-bottom: 21px;
 	}
+
+	.accordion-catalog__artists {
+		max-height: 318px;
+	}
+
+	.catalog-bot-left__img-container {
+		width: 100%;
+	}
+
+	.events__item:not(:nth-child(2n)) {
+		margin-right: 36px;
+	}
+
+	.events__item {
+		width: calc((100% - 36px) / 2 );
+	}
+
 }
+
 
 @media (max-width: 725px) {
 	.main-text {

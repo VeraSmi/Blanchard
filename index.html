@@ -37,6 +37,7 @@
 	<script defer src="/js/select-gallery.js"></script>
 	<script defer src="/js/tabs-catalog.js"></script>
 	<script defer src="/js/accordion.js"></script>
+	<script defer src="/js/events-slider-button.js"></script>
 	
 </head>
 
@@ -59,7 +60,7 @@
 						<source srcset="/img/Лого_320.png" media=" (max-width: 725px) ">
 						<source srcset="/img/Лого_1024.png" media=" (max-width: 1024px) ">
 						<img src="/img/Лого.png" alt="Логотип галереи Бланчард">
-					</picture>
+						</picture>
 					<div class="header-top__menu-container">
 						<button class="btn-reset cursor header-top__button">
 							<span class="header-top__button-img"></span>
@@ -370,7 +371,14 @@
 								года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со всевозможными подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане Флоренции в костюмах того времени).</div>
 						</div>
 						<div class="catalog-bot__left catalog-bot-left tabs-artist__content" data-target="artist-plug">
-							<div class="catalog-bot-left__img catalog-bot-left__img-plug"></div>
+							<div class="catalog-bot-left__img-container">
+								<picture class="catalog-bot-left__img">
+									<source srcset="/img/girlandayo.jpg" media=" (max-width: 1024px) ">
+									<source srcset="/img/girlandayo.jpg" media=" (max-width: 1024px) ">
+									<source srcset="/img/girlandayo.jpg" media=" (max-width: 1024px) ">
+									<img src="/img/girlandayo.jpg" alt="Доменико Гирландайо">
+								</picture>
+							</div>
 							<h3 class="catalog-bot-left__heading">Что мы о нём знаем?</h3>
 							<div class="main-text catalog-bot-left__descr-plug">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</div>
 							<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
@@ -742,6 +750,91 @@
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</section>
+		<section class="events">
+			<div class="container events__container">
+				<h2 class="second-heading events__heading">События</h2>
+				<div class="events__swiper">
+					<ul class="events__list swiper-wrapper" data-mobile="false">
+						<li class="events__item swiper-slide">
+							<div class="events__item-top">
+								<picture>
+									<img class="events__img" src="/img/event-1.jpg" alt="Книжная гравюра в живом восприятии">
+								</picture>
+							</div>
+							<div class="events__item-bottom">
+								<p class="events__location">Музей им. Щусева
+								с 20 марта по 30 апреля</p>
+								<h3 class="events__item-heading">Книжная гравюра в живом восприятии</h3>
+								<p class="main-text events__descr">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+								<a href="#" class="events__link cursor">Подробнее</a>
+							</div>
+						</li>
+						<li class="events__item swiper-slide">
+							<div class="events__item-top">
+								<picture>	
+								<img class="events__img" src="/img/event-2.jpg" alt="«Открытая дискуссия»">
+								</picture>
+							</div>
+							<div class="events__item-bottom">
+								<p class="events__location">ММОМА
+								24 марта 19:00</p>
+								<h3 class="events__item-heading">«Открытая дискуссия». Дмитрий Петров и Сергей Ильин.</h3>
+								<p class="main-text events__descr">Высокий уровень вовлечения представителей целевой аудитории является четким доказательством простого факта.</p>
+								<a href="#" class="events__link cursor">Подробнее</a>
+							</div>
+						</li>
+						<li class="events__item swiper-slide">
+							<div class="events__item-top">
+								<picture>
+									<img class="events__img" src="/img/event-3.jpg" alt="Выставка «Формация 2020»">
+								</picture>
+							</div>
+							<div class="events__item-bottom">
+								<p class="events__location">Еврейский музей
+								с 31 марта по 21 апреля</p>
+								<h3 class="events__item-heading">Выставка «Формация 2020»</h3>
+								<p class="main-text events__descr">Идейные соображения высшего порядка, а также современная методология разработки играет важную роль в формировании глубокомысленных рассуждений.</p>
+								<a href="#" class="events__link cursor">Подробнее</a>
+							</div>
+						</li>
+						<li class="events__item swiper-slide">
+							<div class="events__item-top">
+								<picture>
+									<img class="events__img" src="/img/event-4.jpg" alt="XXIV Международная биеннале молодого искусства">
+								</picture>
+							</div>
+							<div class="events__item-bottom">
+								<p class="events__location">Третьяковка на Крымском валу
+								с 30 марта по 30 апреля</p>
+								<h3 class="events__item-heading">XXIV Международная биеннале молодого искусства</h3>
+								<p class="main-text events__descr">Внезапно, реплицированные с зарубежных источников, современные исследования.</p>
+								<a href="#" class="events__link cursor">Подробнее</a>
+							</div>
+						</li>
+						<li class="events__item swiper-slide">
+							<div class="events__item-top">
+								<picture>	
+								<img class="events__img" src="/img/event-5.jpg" alt="Джон Винзор. Фотографии из серии «Метафора серебра»">
+								</picture>
+							</div>
+							<div class="events__item-bottom">
+								<p class="events__location">ММАМ
+								с 8 апреля по 20 мая</p>
+								<h3 class="events__item-heading">Джон Винзор. Фотографии из серии «Метафора серебра»</h3>
+								<p class="main-text events__descr">Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую продолжили его брат Давид и сын Ридольфо.	</p>
+								<a href="#" class="events__link cursor">Подробнее</a>
+							</div>
+						</li>
+					</ul>
+					<div class="events__swiper-pagination swiper-pagination"></div>
+				</div>
+				<div class="events__btn-container">
+					<button class="btn events__btn cursor">
+						Все события
+					</button>
 				</div>
 			</div>
 		</section>

@@ -71,6 +71,10 @@
 		cursor: url(/img/cursor-black-hover.png), pointer;
 	}
 
+	.events .cursor:hover {
+		cursor: url(/img/cursor-black-hover.png), pointer;
+	}
+
 	.tabs-country__btn:hover:not(:active) .catalog-top__img-itself {
 		filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
 	}
@@ -92,6 +96,19 @@
 
 	.accordion-catalog__item:hover:not(:active) .tabs-artist__btn {
 		color: var(--amethyst);
+	}
+
+	.events__link:hover:not(:active) {
+		color: var(--royal-purple);
+	}
+
+	.events__link:hover::after {
+		border-color: var(--royal-purple);
+	}
+
+	.events__btn:hover {
+		background-color: var(--amethyst);
+		color: var(--white);
 	}
 
 }
@@ -161,6 +178,22 @@
 	background-color: var(--amethyst);
 }
 
+.events__link.focus-visible {
+	color: var(--white);
+}
+
+.events__link.focus-visible::after {
+	border-color: var(--white);
+}
+
+.events__link.focus-visible::before {
+	opacity: 1;
+}
+
+.events__btn.focus-visible::before {
+	opacity: 1;
+}
+
 
 /* active */
 a:active {
@@ -216,6 +249,10 @@ a:active {
 	cursor: url(/img/cursor-black-active.png), pointer;
 }
 
+.events .cursor:active {
+	cursor: url(/img/cursor-black-active.png), pointer;
+}
+
 .catalog-top__img::after {
 	content: '';
 	position: absolute;
@@ -251,4 +288,18 @@ a:active {
 .tabs-artist__btn.active, .tabs-artist__btn:active {
 	color: var(--royal-purple);
 	border-bottom-color: transparent;
+}
+
+.events__link:active {
+	color: var(--grey-black);
+}
+
+.events__link:active::after {
+	border-color: var(--grey-black);
+}
+
+.events__btn:active {
+	border: 3px solid var(--heliotrope);
+	background-color: var(--royal-purple);
+	color: var(--white);
 }
