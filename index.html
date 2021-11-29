@@ -214,7 +214,7 @@
 						</li>
 					</ul>
 					<div class="header-bottom__search search">
-						<button class="btn-reset cursor search__button search__button_bot" tabsindex="-1">
+						<button class="btn-reset cursor search__button search__button_bot" tabindex="-1">
 							<span class="search__icon"></span>
 						</button>
 						<form class="search__form" id="search__form_bot" onsubmit="return false" >
@@ -756,7 +756,7 @@
 		<section class="events">
 			<div class="container events__container">
 				<h2 class="second-heading events__heading">События</h2>
-				<div class="events__swiper">
+				<div class="events__swiper swiper">
 					<ul class="events__list swiper-wrapper" data-mobile="false">
 						<li class="events__item swiper-slide">
 							<div class="events__item-top">
@@ -835,6 +835,134 @@
 					<button class="btn events__btn cursor">
 						Все события
 					</button>
+				</div>
+			</div>
+		</section>
+		<section class="editions">
+			<div class="container edition__container">
+				<div class="editions__left">
+					<h2 class="second-heading editions__heading">Издания</h2>
+					<h6 class="editions__category">Категории</h6>
+					<form action="" class="editions__form">
+						<label for="bestseller" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="bestseller">
+							Бестселлеры
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="art" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="art">
+							Искусство
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="architecture" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="architecture">
+							Архитектура
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="design" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="design">
+							Дизайн
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="fashion" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="fashion">
+							Мода
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="kids" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="kids">
+							Детям
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="fiction" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="fiction">
+							Художественная литература
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="publicism" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="publicism">
+							Публицистика
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="guide" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="guide">
+							Путеводители 
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="filisophy" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="filisophy">
+							Философия
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="study" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="study">
+							Учебная литература 
+							<span class="editions__custom-checkbox"></span>
+						</label>
+						<label for="magazines" class="main-text editions__label cursor">
+							<input type="checkbox" class="editions__checkbox"  id="magazines">
+							Журналы и газеты
+							<span class="editions__custom-checkbox"></span>
+						</label>
+					</form>
+				</div>
+				<div class="swiper editions__swiper">
+					<div class="swiper__btns">
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
+					<ul class="swiper-wraper editions__list">
+						<li class="swiper-slide editions__item">
+							<img src="/img/editions-1.jpg" alt="Искусство цвета" class="editions__swiper-img">
+							<h5 class="editions__item-heading">Искусство цвета </h5>
+							<div class="editions__item-descr">Иттен, Иоханнес</div>
+							<button class="btn editions__item-button cursor">Заказать</button>
+							<div class="editions__item-price">620 руб</div>
+						</li>
+						<li class="swiper-slide editions__item">
+							<img src="/img/editions-2.jpg" alt="Типографика" class="editions__swiper-img">
+							<h5 class="editions__item-heading">Типографика </h5>
+							<div class="editions__item-descr">Рудер, Эмиль</div>
+							<button class="btn editions__item-button cursor">Заказать</button>
+							<div class="editions__item-price">2 450 руб</div>
+						</li>
+						<li class="swiper-slide editions__item">
+							<img src="/img/editions-3.jpg" alt="Книга про буквы" class="editions__swiper-img">
+							<h5 class="editions__item-heading">Книга про буквы </h5>
+							<div class="editions__item-descr"> Гордон, Юрий</div>
+							<button class="btn editions__item-button cursor">Заказать</button>
+							<div class="editions__item-price">2 200 руб</div>
+						</li>
+						<li class="swiper-slide editions__item">
+							<img src="/img/editions-4.jpg" alt="Николай Ильин" class="editions__swiper-img">
+							<h5 class="editions__item-heading">Николай Ильин</h5>
+							<div class="editions__item-descr">Кричевский, Владимир</div>
+							<button class="btn editions__item-button cursor">Заказать</button>
+							<div class="editions__item-price">1 100 руб</div>
+						</li>
+						<li class="swiper-slide editions__item">
+							<img src="/img/editions-5.jpg" alt="Модульные сетки в графическом дизайне" class="editions__swiper-img">
+							<h5 class="editions__item-heading">Модульные сетки в граф... </h5>
+							<div class="editions__item-descr">Мюллер-Брокманн, Йозеф</div>
+							<button class="btn editions__item-button cursor">Заказать</button>
+							<div class="editions__item-price"></div>
+						</li>
+						<li class="swiper-slide editions__item">
+							<img src="/img/editions-6.jpg" alt="Эволюция графических стилетй" class="editions__swiper-img">
+							<h5 class="editions__item-heading">Эволюция графических ст...</h5>
+							<div class="editions__item-descr">Хеллер, Чваст</div>
+							<button class="btn editions__item-button cursor">Заказать</button>
+							<div class="editions__item-price">3 200 руб</div>
+						</li>
+						<li class="swiper-slide editions__item">
+							<img src="/img/editions-7.jpg" alt="Искусство и визуальное восприятие" class="editions__swiper-img">
+							<h5 class="editions__item-heading">Искусство и визуальное в.. </h5>
+							<div class="editions__item-descr">Арнхейм, Рудольф</div>
+							<button class="btn editions__item-button cursor">Заказать</button>
+							<div class="editions__item-price">2 200 руб</div>
+						</li>
+					</div>
 				</div>
 			</div>
 		</section>

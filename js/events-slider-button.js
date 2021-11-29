@@ -1,4 +1,4 @@
-document.addEventListener('DomContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {
   let btn = document.querySelector('.events__btn');
   let allItems = document.querySelectorAll('.events__item');
   const slider = document.querySelector('.events__swiper');
@@ -12,21 +12,21 @@ document.addEventListener('DomContentLoaded', function() {
 
   let mySwiper;
 
-function mobileSlider() {
-	if (window.innerWidth <= 725 && slider.dataset.mobile == 'false') {
-		mySwiper = new Swiper(slider, {
-			slidesPerView: 1,
-			spaceBetween: 10,
-			loop: true,
-			slideClass: 'events__item',
-			pagination: {
-				el: '.events__swiper-pagination',
-				clickable: true,
-			},
-		});
+	function mobileSlider() {
+		if (window.innerWidth <= 725 && slider.dataset.mobile == 'false') {
+			mySwiper = new Swiper(slider, {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				loop: true,
+				slideClass: 'events__item',
+				pagination: {
+					el: '.events__swiper-pagination',
+					clickable: true,
+				},
+			});
 
-		slider.dataset.mobile = 'true';
-	}
+			slider.dataset.mobile = 'true';
+		}
 
 	if (window.innerWidth > 725 && slider.dataset.mobile == 'true') {
 		slider.dataset.mobile = 'false';

@@ -65,6 +65,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });
 
+  const editionsSwiper = new Swiper('.editions__swiper', {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    loop: true,
+    slideClass: 'editions__item',
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+
 });
 
 
