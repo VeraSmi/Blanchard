@@ -65,14 +65,34 @@ document.addEventListener('DOMContentLoaded', function () {
 
   });
 
-  const editionsSwiper = new Swiper('.editions__swiper', {
-    slidesPerView: 3,
-    spaceBetween: 10,
-    loop: true,
-    slideClass: 'editions__item',
-    pagination: {
-      el: '.swiper-pagination',
+  const projectsSwiper = new Swiper('.projects__swiper', {
+    navigation: {
+      nextEl: ".swiper-projects-button-next",
+      prevEl: ".swiper-projects-button-prev"
     },
+    a11y: {
+      prevSlideMessage: 'Предыдущий',
+      nextSlideMessage: 'Следующий',
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 0
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 38
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 38
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 38
+      }
+    },
+
   });
 
 });

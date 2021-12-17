@@ -53,6 +53,11 @@
 		stroke: var(--amethyst);
 }
 
+	.gallery__auth-link:hover:not(:active){
+		color: var(--royal-purple);
+		border-bottom: 1px solid var(--royal-purple);
+	}
+
 	.gallery__swiper .swiper-slide:hover::before {
 		top: 25px;
 		right: 25px;
@@ -111,6 +116,75 @@
 		color: var(--white);
 	}
 
+	.editions__label:hover {
+		color: var(--heliotrope);
+	}
+
+	.editions__label:hover .editions__custom-checkbox {
+		border-color: var(--heliotrope);
+	}
+
+	.editions__item-btn:hover {
+		background-color: var(--amethyst);
+	}
+
+	.editions__price-input:hover {
+		border-color: var(--amethyst);
+		background-color: var(--amethyst);
+	}
+
+	.projects .cursor:hover {
+		cursor: url(/img/cursor-black-hover.png), pointer;
+	}
+
+	.projects__partner:hover .projects__img-1 {
+		background-image: url('/img/projects-hover-1.jpg');
+	}
+
+	.projects__partner:hover .projects__img-2 {
+		background-image: url('/img/projects-hover-2.jpg');
+	}
+
+	.projects__partner:hover .projects__img-3 {
+		background-image: url('/img/projects-hover-3.jpg');
+	}
+
+	.projects__partner:hover .projects__img-4 {
+		background-image: url('/img/projects-hover-4.jpg');
+	}
+
+	.projects__partner:hover .projects__img-5 {
+		background-image: url('/img/projects-hover-5.jpg');
+	}
+
+	.projects__partner:hover .projects__img-6 {
+		background-image: url('/img/projects-hover-6.jpg');
+	}
+
+	.projects__partner:hover .projects__img-7 {
+		background-image: url('/img/projects-hover-7.jpg');
+	}
+
+	.projects__partner:hover .projects__img-8 {
+		background-image: url('/img/projects-hover-8.jpg');
+	}
+
+	.projects__partner:hover .projects__img-9 {
+		background-image: url('/img/projects-hover-9.jpg');
+	}
+
+	.swiper-projects-button-prev:hover, .swiper-projects-button-next:hover {
+		background-color: var(--biloba-flower);
+	}
+
+	.projects__link:hover:not(:active) {
+		color: var(--royal-purple);
+		border-bottom: 1px solid var(--royal-purple);
+	}
+
+	.projects__tooltip:hover svg{
+		fill: var(--biloba-flower)
+	}
 }
 
 
@@ -165,6 +239,10 @@
 	stroke: var(--black);
 }
 
+.gallery__auth-link:focus-visible {
+	color: var(--biloba-flower);
+}
+
 .gallery__swiper .swiper-slide.focus-visible .swiper-slide-border::before{
 	opacity: 1;
 }
@@ -194,6 +272,38 @@
 	opacity: 1;
 }
 
+.editions__label.focus-visible {
+	color: var(--heliotrope);
+}
+
+.editions__label.focus-visible .editions__custom-checkbox {
+	border-color: var(--heliotrope);
+}
+
+.editions__item-btn.focus-visible::before {
+	opacity: 1;
+}
+
+.editions__price-input.focus-visible {
+	background-color: var(--amethyst);
+	border-color: white;
+}
+
+.projects__partner.focus-visible .projects__img::before{
+	border-color: var(--amethyst);
+} 
+
+.swiper-projects-button-prev.focus-visible::before, .swiper-projects-button-next.focus-visible::before {
+	opacity: 1;
+}
+
+.projects__link:focus-visible {
+	color: var(--biloba-flower);
+}
+
+.projects__tooltip.focus-visible svg{
+	fill: var(--biloba-flower)
+}
 
 /* active */
 a:active {
@@ -239,6 +349,10 @@ a:active {
 .swiper-button-next:active svg .background,
 .swiper-button-prev:active svg .background {
 	fill: var(--royal-purple);
+}
+
+.gallery__auth-link:hover:not(:active){
+	color: var(--royal-purple);
 }
 
 .gallery__swiper .swiper-slide:active::after {
@@ -302,4 +416,42 @@ a:active {
 	border: 3px solid var(--heliotrope);
 	background-color: var(--royal-purple);
 	color: var(--white);
+}
+
+.editions__label:active {
+	cursor: url(/img/cursor-active.svg), pointer;	
+}
+
+.editions__item-btn:active {
+	padding: 5.5px 15.5px;
+	border: 3px solid var(--biloba-flower);
+}
+
+.editions__price-input:active {
+	background-color: var(--royal-purple);
+	border-color: var(--royal-purple);
+}
+
+.projects .cursor:active {
+	cursor: url(/img/cursor-black-active.png), pointer;
+}
+
+.projects__partner:active .projects__img::before{
+	border-color: var(--amethyst);
+}
+
+.swiper-projects-button-prev:active:before, .swiper-projects-button-next:active:before {
+	opacity: 1;
+}
+
+.projects__link:active {
+	color: var(--royal-purple);
+}
+
+.projects__tooltip:active svg{
+	fill: var(--amethyst)
+}
+
+.projects__tooltip:active svg .projects__tooltip-letter{
+	fill: var(--white)
 }
