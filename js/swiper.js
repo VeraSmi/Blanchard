@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const swiper = new Swiper('.swiper-background', {
     loop: true,
     setWrapperSize: true,
-    // autoplay: {
-    //   delay: 7000,
-    // },
+    autoplay: {
+      delay: 7000,
+    },
   });
 
   const gallerySwiper = new Swiper(".gallery__swiper", {

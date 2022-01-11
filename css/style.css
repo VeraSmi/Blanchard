@@ -182,7 +182,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .swiper-background {
 	height: 100%;
-	/* animation: blanchard 6s 1s linear infinite alternate; */
+	animation: blanchard 6s 1s linear infinite alternate;
 }
 
 .header-top, .header-bottom {
