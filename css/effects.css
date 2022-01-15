@@ -80,8 +80,9 @@
 		cursor: url(/img/cursor-black-hover.png), pointer;
 	}
 
-	.tabs-country__btn:hover:not(:active) .catalog-top__img-itself {
-		filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+
+	.tabs-country__btn:hover:not(:active) .catalog-top__shadow::after{
+		opacity: 1;
 	}
 
 	.tabs-artist__btn::after {
@@ -143,40 +144,13 @@
 		cursor: url(/img/cursor-black-hover.png), pointer;
 	}
 
-	.projects__partner:hover .projects__img-1 {
-		background-image: url('/img/projects-hover-1.jpg');
+	.projects__partner:hover {
+		border-color: transparent;
 	}
 
-	.projects__partner:hover .projects__img-2 {
-		background-image: url('/img/projects-hover-2.jpg');
-	}
-
-	.projects__partner:hover .projects__img-3 {
-		background-image: url('/img/projects-hover-3.jpg');
-	}
-
-	.projects__partner:hover .projects__img-4 {
-		background-image: url('/img/projects-hover-4.jpg');
-	}
-
-	.projects__partner:hover .projects__img-5 {
-		background-image: url('/img/projects-hover-5.jpg');
-	}
-
-	.projects__partner:hover .projects__img-6 {
-		background-image: url('/img/projects-hover-6.jpg');
-	}
-
-	.projects__partner:hover .projects__img-7 {
-		background-image: url('/img/projects-hover-7.jpg');
-	}
-
-	.projects__partner:hover .projects__img-8 {
-		background-image: url('/img/projects-hover-8.jpg');
-	}
-
-	.projects__partner:hover .projects__img-9 {
-		background-image: url('/img/projects-hover-9.jpg');
+	.projects__partner:hover .projects__img {
+		filter: grayscale(0);
+		opacity: 1;
 	}
 
 	.swiper-projects-button-prev:hover, .swiper-projects-button-next:hover {
@@ -271,8 +245,27 @@
 	opacity: 1;
 }
 
-.tabs-country__btn.focus-visible  .catalog-top__img {
-	filter: drop-shadow(0px 0px 20px rgba(157, 92, 208, 0.7));
+.tabs-country__btn {
+	position: relative;
+}
+
+.catalog-top__designs, .catalog-top__shadow {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: 100px;
+	background-color: transparent;
+}
+
+.tabs-country__btn.focus-visible  .catalog-top__shadow::after {
+	opacity: 1;
+}
+
+
+.catalog-top__img {
+	border-radius: 100px;
 }
 
 .tabs-artist__btn.focus-visible {
@@ -319,7 +312,7 @@
 	background-color: #666;
 }
 
-.projects__partner.focus-visible .projects__img::before{
+.projects__partner.focus-visible {
 	border-color: var(--amethyst);
 } 
 
@@ -414,7 +407,7 @@ a:active {
 	cursor: url(/img/cursor-black-active.png), pointer;
 }
 
-.catalog-top__img::after {
+.catalog-top__designs::after {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -423,14 +416,27 @@ a:active {
 	left: 0;
 	border: 2px solid var(--amethyst);
 	border-radius: 100px;
+	background-color: transparent;
 	opacity: 0;
 }
 
-.tabs-country__btn:active .catalog-top__img::after {
+.catalog-top__shadow::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	border-radius: 100px;
+	box-shadow: 0 0 20px rgba(157, 92, 208, .7);
+	opacity: 0;
+}
+
+.tabs-country__btn:active .catalog-top__designs::after {
 		opacity: 1;
 }
 
-.catalog-top__img::before {
+.catalog-top__designs::before {
 	content: '';
 	position: absolute;
 	top: -8px;
@@ -439,10 +445,11 @@ a:active {
 	left: -8px;
 	border: 2px solid var(--amethyst);
 	border-radius: 100px;
+	background-color: transparent;
 	opacity: 0;
 }
 
-.tabs-country__btn.active .catalog-top__img::before {
+.tabs-country__btn.active .catalog-top__designs::before {
 		opacity: 1;
 }
 
@@ -489,8 +496,13 @@ a:active {
 	cursor: url(/img/cursor-black-active.png), pointer;
 }
 
-.projects__partner:active .projects__img::before{
+.projects__partner:active {
 	border-color: var(--amethyst);
+}
+
+.projects__partner:active .projects__img {
+	filter: grayscale(0);
+	opacity: 1;
 }
 
 .swiper-projects-button-prev:active:before, .swiper-projects-button-next:active:before {
@@ -515,6 +527,10 @@ a:active {
 
 .contacts .contacts__left-form-input .cursor:active {
 	cursor: none;
+}
+
+.contacts__left-link:active {
+	opacity: 1;
 }
 
 .contacts__left-link:active svg .outline{

@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="/css/jquery-ui.css">
 	<link rel="stylesheet" href="/css/accordion.css">
 	<link rel="stylesheet" href="/css/tippy.css">
+	<link rel="stylesheet" href="/css/justValidateTooltip.css">
 
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/png">
 	
@@ -23,11 +24,14 @@
 	<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 	<script src="/js/mark.min.js"></script>
 	<script src="/js/jquery.min.js"></script>
+	<script src="/js/jquery-ui.js"></script>
 	<script src="/js/jquery.mark.min.js"></script>
 	<script src="/js/swiper-bundle.min.js"></script>
 	<script src="/js/choices.min.js"></script>
 	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 	<script src="/js/focus-visible.min.js"></script> 
+	<script src="/js/inputmask.min.js"></script> 
+	<script src="/js/just-validate.min.js"></script> 
 	<!-- <script src="/js/tippy-bundle.umd.js"></script> 
 	<script src="/js/tippy.cjs.js"></script> 
 	<script src="/js/tippy.esm.js"></script> 
@@ -55,6 +59,7 @@
 	<script defer src="/js/editions-spoiler.js"></script>
 	<script defer src="/js/projects-tooltip.js"></script>
 	<script defer src="/js/contacts-map.js"></script>
+	<script defer src="/js/contacts-form.js"></script>
 	
 </head>
 
@@ -84,25 +89,25 @@
 						</button>
 						<ul class="header-top__list " id="header-top__list">
 							<li class="header-top__item">
-								<a href="#" class="cursor header-top__link">О нас</a>
+								<a href="#about-us" class="cursor header-top__link">О нас</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#" class="cursor header-top__link">Галерея</a>
+								<a href="#gallery" class="cursor header-top__link">Галерея</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#" class="cursor header-top__link">Каталог</a>
+								<a href="#catalog" class="cursor header-top__link">Каталог</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#" class="cursor header-top__link">События</a>
+								<a href="#events" class="cursor header-top__link">События</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#" class="cursor header-top__link">Издания</a>
+								<a href="#editions" class="cursor header-top__link">Издания</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#" class="cursor header-top__link">Проекты</a>
+								<a href="#projects" class="cursor header-top__link">Проекты</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#" class="cursor header-top__link">Контакты</a>
+								<a href="#contacts" class="cursor header-top__link">Контакты</a>
 							</li>
 						</ul>
 						<a href="#" class="cursor header-top__link-enter">
@@ -251,6 +256,7 @@
 	</header>
 	<main>
 		<section class="about-us">
+			<a id="about-us"></a>
 			<div class="container about-us__container">
 				<h2 class="second-heading about-us__heading">О нас</h2>
 				<p class="main-text about-us__descr">Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.</p>
@@ -324,6 +330,7 @@
 			</div> 
 		</section>
 		<section class="catalog">
+			<a id="catalog"></a>
 			<div class="container catalog__container">
 				<div class="catalog__top catalog-top">
 					<h2 class="second-heading catalog-top__heading">Каталог</h2>
@@ -331,41 +338,51 @@
 						<li class="catalog-top__item">
 							<button class="btn-reset cursor tabs-country__btn" data-path="country-plug">
 								<picture class="catalog-top__img">
-									<source srcset="/img/france-320.jpg" media=" (max-width: 725px) ">
-									<img class="catalog-top__img-itself" src="/img/france.jpg" alt="Франция">
+									<source srcset="/img/france-320.png" media=" (max-width: 725px) ">
+									<img src="/img/france.png" alt="Франция">
 								</picture>
+								<span class="catalog-top__designs"></span>
+								<span class="catalog-top__shadow"></span>
 							</button>
 						</li>
 						<li class="catalog-top__item">
 							<button class="btn-reset cursor tabs-country__btn" data-path="country-plug">
 								<picture class="catalog-top__img">
-									<source srcset="/img/germany-320.jpg" media=" (max-width: 725px) ">
-									<img class="catalog-top__img-itself" src="/img/germany.jpg" alt="Германия">
+									<source srcset="/img/germany-320.png" media=" (max-width: 725px) ">
+									<img src="/img/germany.png" alt="Германия">
 								</picture>
+								<span class="catalog-top__designs"></span>
+								<span class="catalog-top__shadow"></span>
 							</button>
 						</li>
 						<li class="catalog-top__item">
 							<button class="btn-reset cursor tabs-country__btn active" data-path="italy">
 								<picture class="catalog-top__img">
-									<source srcset="/img/italy-320.jpg" media=" (max-width: 725px) ">
-									<img class="catalog-top__img-itself" src="/img/italy.jpg" alt="Италия">
+									<source srcset="/img/italy-320.png" media=" (max-width: 725px) ">
+									<img src="/img/italy.png" alt="Италия">
 								</picture>
+								<span class="catalog-top__designs"></span>
+								<span class="catalog-top__shadow"></span>
 							</button>
 						</li>
 						<li class="catalog-top__item">
 							<button class="btn-reset cursor tabs-country__btn" data-path="country-plug">
 								<picture class="catalog-top__img">
-									<source srcset="/img/russia-320.jpg" media=" (max-width: 725px) ">
-									<img class="catalog-top__img-itself" src="/img/russia.jpg" alt="Россия">
+									<source srcset="/img/russia-320.png" media=" (max-width: 725px) ">
+									<img src="/img/russia.png" alt="Россия">
 								</picture>
+								<span class="catalog-top__designs"></span>
+								<span class="catalog-top__shadow"></span>
 							</button>
 						</li>
 						<li class="catalog-top__item">
 							<button class="btn-reset cursor tabs-country__btn" data-path="country-plug">
 								<picture class="catalog-top__img">
-									<source srcset="/img/belgium-320.jpg" media=" (max-width: 725px) ">
-									<img class="catalog-top__img-itself" src="/img/belgium.jpg" alt="Бельгия">
+									<source srcset="/img/belgium-320.png" media=" (max-width: 725px) ">
+									<img src="/img/belgium.png" alt="Бельгия">
 								</picture>
+								<span class="catalog-top__designs"></span>
+								<span class="catalog-top__shadow"></span>
 							</button>
 						</li>
 					</ul>
@@ -771,6 +788,7 @@
 			</div>
 		</section>
 		<section class="events">
+			<a id="events"></a>
 			<div class="container events__container">
 				<h2 class="second-heading events__heading">События</h2>
 				<div class="events__swiper-container">
@@ -858,6 +876,7 @@
 			</div>
 		</section>
 		<section class="editions">
+			<a id="editions"></a>
 			<div class="container edition__container">
 				<div class="editions__left">
 					<h2 class="second-heading editions__heading">Издания</h2>
@@ -1019,6 +1038,7 @@
 			</div>
 		</section>
 		<section class="projects">
+			<a id="projects"></a>
 			<div class="container projects__container">
 				<h2 class="second-heading projects__heading">
 					Проекты
@@ -1065,47 +1085,47 @@
 						<ul class="swiper-wrapper projects__list">
 							<li class="swiper-slide projects__item">
 								<button class="projects__partner btn-reset cursor" aria-label="Freelands Foundation">
-									<span class="projects__img projects__img-1"></span>
+									<img class="projects__img" src="/img/projects-hover-1.jpg" alt="Freelands Foundation">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
 								<button class="projects__partner btn-reset cursor" aria-label="Institute for Contemporary art">
-									<span class="projects__img projects__img-2"></span>
+									<img class="projects__img" src="/img/projects-hover-2.jpg" alt="Institute for Contemporary art">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
 								<button class="projects__partner btn-reset cursor" aria-label="Workhouse Art center">
-									<span class="projects__img projects__img-3"></span>
+									<img class="projects__img" src="/img/projects-hover-3.jpg" alt="Workhouse Art center">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
 								<button class="projects__partner btn-reset cursor" aria-label="1849">
-									<span class="projects__img projects__img-4"></span>
+									<img class="projects__img" src="/img/projects-hover-4.jpg" alt="1849">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
 								<button class="projects__partner btn-reset cursor" aria-label="Hiscox">
-									<span class="projects__img projects__img-5"></span>
+									<img class="projects__img" src="/img/projects-hover-5.jpg" alt="Hiscox">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
 								<button class="projects__partner btn-reset cursor" aria-label="Camden Arts center">
-									<span class="projects__img projects__img-6"></span>
+									<img class="projects__img" src="/img/projects-hover-6.jpg" alt="Camden Arts center">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
 								<button class="projects__partner btn-reset cursor" aria-label="Stassen">
-									<span class="projects__img projects__img-7"></span>
+									<img class="projects__img" src="/img/projects-hover-7.jpg" alt="Stassen">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
 								<button class="projects__partner btn-reset cursor" aria-label="Watts Gallery artists village">
-									<span class="projects__img projects__img-8"></span>
+									<img class="projects__img" src="/img/projects-hover-8.jpg" alt="Watts Gallery artists village">
 								</button>
 								<li class="swiper-slide projects__item">
 							</li>
 								<button class="projects__partner btn-reset cursor" aria-label="Esad">
-									<span class="projects__img projects__img-9"></span>
+									<img class="projects__img" src="/img/projects-hover-9.jpg" alt="Esad">
 								</button>
 							</li>
 						</ul>
@@ -1114,6 +1134,7 @@
 			</div>
 		</section>
 		<section class="contacts">
+			<a id="contacts"></a>
 			<h2 class="second-heading contacts__heading">Контакты</h2>
 			<div class="contacts__container">
 				<div class="contacts__left">
@@ -1121,8 +1142,12 @@
 					<p class="main-text contacts__left-description">Леонтьевский переулок, дом 5/1</p>
 					<h4 class="contacts__left-form-heading contacts__second-heading">Заказать обратный звонок</h4>
 					<form action="#" class="contacts__left-form">
-						<input class="main-text contacts__left-form-input cursor" type="text" placeholder="Имя*">
-						<input class="main-text contacts__left-form-input cursor" type="tel" placeholder="Телефон*">
+						<label class="contacts__left-form-label">
+							<input class="main-text contacts__left-form-input cursor" name="name" type="text" placeholder="Имя*" autocomplete="off" data-validate-field="name">
+						</label>
+						<label class="contacts__left-form-label">
+							<input class="main-text contacts__left-form-input cursor" name="tel" type="tel" placeholder="Телефон*" autocomplete="off" data-validate-field="tel" data-validate-rules="phone">
+						</label>
 						<button class="contacts__left-form-button btn-reset cursor">Заказать</button>
 					</form>
 					<h4 class="contacts__left-social-heading contacts__second-heading">Связаться в один клик</h4>
