@@ -1,0 +1,39 @@
+.modal {
+  /* display: none; */
+  vertical-align: top;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: fit-content;
+  box-sizing: border-box;
+  background: transparent;
+  padding: 0px;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  -o-border-radius: none;
+  -ms-border-radius: none;
+  border-radius: none; 
+  box-shadow: none;
+}
+
+.modal a.close-modal {
+  display: none;
+}
+
+.modal__img {
+  margin-bottom: 20px;
+  /* width: 20vw;
+  height: 70vh; */
+  width: 110%;
+}
+
+.modal__text {
+  color: rgba(255, 255, 255, .7);
+  text-align: center;
+}
+
+
+.contacts__left-form-input.error {
+  box-shadow: 0 0 15px red;
+}
+

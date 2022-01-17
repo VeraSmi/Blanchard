@@ -22,4 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
   tabsActive('.tabs-country__btn', '.tabs-country__content');
   tabsActive('.tabs-artist__btn', '.tabs-artist__content');
 
+  document.querySelectorAll('.tabs-artist__btn').forEach(function (click){
+    click.addEventListener('click', function () {
+      window.scrollTo(0, 3500)
+    })  
+  })
+
+
 })
