@@ -1,5 +1,5 @@
+<!DOCTYPE html>
 <html lang="ru">
-	<!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,7 @@
 	<link rel="stylesheet" href="/css/tippy.css">
 	<link rel="stylesheet" href="/css/justValidateTooltip.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.css" integrity="sha512-T3VL1q6jMUIzGLRB9z86oJg9PgF7A55eC2XkB93zyWSqQw3Ju+6IEJZYBfT7E9wOHM7HCMCOZSpcssxnUn6AeQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="/css/jquery.modal.min.css">
 	<link rel="stylesheet" href="/css/feachures.css">
 
 	<link rel="shortcut icon" href="/img/favicon.png" type="image/png">
@@ -34,11 +35,8 @@
 	<script src="/js/focus-visible.min.js"></script> 
 	<script src="/js/inputmask.min.js"></script> 
 	<script src="/js/just-validate.min.js"></script> 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.2/jquery.modal.min.js" integrity="sha512-ztxZscxb55lKL+xmWGZEbBHekIzy+1qYKHGZTWZYH1GUwxy0hiA18lW6ORIMj4DHRgvmP/qGcvqwEyFFV7OYVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<!-- <script src="/js/tippy-bundle.umd.js"></script> 
-	<script src="/js/tippy.cjs.js"></script> 
-	<script src="/js/tippy.esm.js"></script> 
-	<script src="/js/tippy.umd.js"></script>  -->
+	<script src="/js/jquery.modal.min.js"></script> 
+
 
 	<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
 	<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
@@ -63,28 +61,9 @@
 	<script defer src="/js/projects-tooltip.js"></script>
 	<script defer src="/js/contacts-map.js"></script>
 	<script defer src="/js/contacts-form.js"></script>
-	<script>
-		var modal = new tingle.modal({
-    footer: true,
-    stickyFooter: false,
-    closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Close",
-    cssClass: ['custom-class-1', 'custom-class-2'],
-    onOpen: function() {
-					console.log('modal open');
-			},
-			onClose: function() {
-					console.log('modal closed');
-			},
-			beforeClose: function() {
-					// here's goes some logic
-					// e.g. save content before closing the modal
-					return true; // close the modal
-					return false; // nothing happens
-				}
-		});
-	</script>
-	
+	<script defer src="/js/flowing-scroll.js"></script>
+	<script defer src="/js/modal.js"></script>
+
 </head>
 
 <body class="body">
@@ -113,25 +92,25 @@
 						</button>
 						<ul class="header-top__list " id="header-top__list">
 							<li class="header-top__item">
-								<a href="#about-us" class="cursor header-top__link">О нас</a>
+								<a href="#about-us" class="cursor header-top__link flowing-scroll">О нас</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#gallery" class="cursor header-top__link">Галерея</a>
+								<a href="#gallery" class="cursor header-top__link flowing-scroll">Галерея</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#catalog" class="cursor header-top__link">Каталог</a>
+								<a href="#catalog" class="cursor header-top__link flowing-scroll">Каталог</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#events" class="cursor header-top__link">События</a>
+								<a href="#events" class="cursor header-top__link flowing-scroll">События</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#editions" class="cursor header-top__link">Издания</a>
+								<a href="#editions" class="cursor header-top__link flowing-scroll">Издания</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#projects" class="cursor header-top__link">Проекты</a>
+								<a href="#projects" class="cursor header-top__link flowing-scroll">Проекты</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#contacts" class="cursor header-top__link">Контакты</a>
+								<a href="#contacts" class="cursor header-top__link flowing-scroll">Контакты</a>
 							</li>
 						</ul>
 						<a href="#" class="cursor header-top__link-enter">
@@ -142,7 +121,7 @@
 						</a>
 					</div>
 					<div class="header-top__search search">
-						<button class="btn-reset cursor search__button search__buttop_top" aria-label="Открыть поиск">
+						<button class="btn-reset cursor search__button search__button-top" aria-label="Открыть поиск">
 							<span class="search__icon"></span>
 						</button>
 						<form class="search__form" id="search__form_top" onsubmit="return false">
@@ -167,14 +146,14 @@
 							</button>
 							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-1">
-									<span class="header-bottom__img header-bottom__img-realism-1">Тинторетто</span>
-									<span class="header-bottom__img header-bottom__img-realism-2">Фридрих</span>
-									<span class="header-bottom__img header-bottom__img-realism-3">Леонардо</span>
-									<span class="header-bottom__img header-bottom__img-realism-4">Верроккьо</span>
-									<span class="header-bottom__img header-bottom__img-realism-1">Тинторетто</span>
-									<span class="header-bottom__img header-bottom__img-realism-2">Фридрих</span>
-									<span class="header-bottom__img header-bottom__img-realism-3">Леонардо</span>
-									<span class="header-bottom__img header-bottom__img-realism-4">Верроккьо</span>
+									<span class="cursor header-bottom__img header-bottom__img-realism-1">Тинторетто</span>
+									<span class="cursor header-bottom__img header-bottom__img-realism-2">Фридрих</span>
+									<span class="cursor header-bottom__img header-bottom__img-realism-3">Леонардо</span>
+									<span class="cursor header-bottom__img header-bottom__img-realism-4">Верроккьо</span>
+									<span class="cursor header-bottom__img header-bottom__img-realism-1">Тинторетто</span>
+									<span class="cursor header-bottom__img header-bottom__img-realism-2">Фридрих</span>
+									<span class="cursor header-bottom__img header-bottom__img-realism-3">Леонардо</span>
+									<span class="cursor header-bottom__img header-bottom__img-realism-4">Верроккьо</span>
 								</div>
 							</div>
 						</li>
@@ -187,14 +166,14 @@
 							</button>
 							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-2">
-									<span class="header-bottom__img header-bottom__img-impress-1">Моне</span>
-									<span class="header-bottom__img header-bottom__img-impress-2">Сислей</span>
-									<span class="header-bottom__img header-bottom__img-impress-3">Мане</span>
-									<span class="header-bottom__img header-bottom__img-impress-4">Ренуар</span>
-									<span class="header-bottom__img header-bottom__img-impress-1">Моне</span>
-									<span class="header-bottom__img header-bottom__img-impress-2">Сислей</span>
-									<span class="header-bottom__img header-bottom__img-impress-3">Мане</span>
-									<span class="header-bottom__img header-bottom__img-impress-4">Ренуар</span>
+									<span class="cursor header-bottom__img header-bottom__img-impress-1">Моне</span>
+									<span class="cursor header-bottom__img header-bottom__img-impress-2">Сислей</span>
+									<span class="cursor header-bottom__img header-bottom__img-impress-3">Мане</span>
+									<span class="cursor header-bottom__img header-bottom__img-impress-4">Ренуар</span>
+									<span class="cursor header-bottom__img header-bottom__img-impress-1">Моне</span>
+									<span class="cursor header-bottom__img header-bottom__img-impress-2">Сислей</span>
+									<span class="cursor header-bottom__img header-bottom__img-impress-3">Мане</span>
+									<span class="cursor header-bottom__img header-bottom__img-impress-4">Ренуар</span>
 								</div>
 							</div>
 						</li>
@@ -207,14 +186,14 @@
 							</button>
 							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-3">
-									<span class="header-bottom__img header-bottom__img-postimp-1">Ван Гог</span>
-									<span class="header-bottom__img header-bottom__img-postimp-2">Сезанн</span>
-									<span class="header-bottom__img header-bottom__img-postimp-3">Гоген</span>
-									<span class="header-bottom__img header-bottom__img-postimp-4">Сёра</span>
-									<span class="header-bottom__img header-bottom__img-postimp-1">Ван Гог</span>
-									<span class="header-bottom__img header-bottom__img-postimp-2">Сезанн</span>
-									<span class="header-bottom__img header-bottom__img-postimp-3">Гоген</span>
-									<span class="header-bottom__img header-bottom__img-postimp-4">Сёра</span>
+									<span class="cursor header-bottom__img header-bottom__img-postimp-1">Ван Гог</span>
+									<span class="cursor header-bottom__img header-bottom__img-postimp-2">Сезанн</span>
+									<span class="cursor header-bottom__img header-bottom__img-postimp-3">Гоген</span>
+									<span class="cursor header-bottom__img header-bottom__img-postimp-4">Сёра</span>
+									<span class="cursor header-bottom__img header-bottom__img-postimp-1">Ван Гог</span>
+									<span class="cursor header-bottom__img header-bottom__img-postimp-2">Сезанн</span>
+									<span class="cursor header-bottom__img header-bottom__img-postimp-3">Гоген</span>
+									<span class="cursor header-bottom__img header-bottom__img-postimp-4">Сёра</span>
 								</div>
 							</div>
 						</li>
@@ -227,14 +206,14 @@
 							</button>
 							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-4">
-									<span class="header-bottom__img header-bottom__img-avangard-1">Кандинский</span>
-									<span class="header-bottom__img header-bottom__img-avangard-2">Маринетти</span>
-									<span class="header-bottom__img header-bottom__img-avangard-3">Малевич</span>
-									<span class="header-bottom__img header-bottom__img-avangard-4">Пикассо</span>
-									<span class="header-bottom__img header-bottom__img-avangard-1">Кандинский</span>
-									<span class="header-bottom__img header-bottom__img-avangard-2">Маринетти</span>
-									<span class="header-bottom__img header-bottom__img-avangard-3">Малевич</span>
-									<span class="header-bottom__img header-bottom__img-avangard-4">Пикассо</span>
+									<span class="cursor header-bottom__img header-bottom__img-avangard-1">Кандинский</span>
+									<span class="cursor header-bottom__img header-bottom__img-avangard-2">Маринетти</span>
+									<span class="cursor header-bottom__img header-bottom__img-avangard-3">Малевич</span>
+									<span class="cursor header-bottom__img header-bottom__img-avangard-4">Пикассо</span>
+									<span class="cursor header-bottom__img header-bottom__img-avangard-1">Кандинский</span>
+									<span class="cursor header-bottom__img header-bottom__img-avangard-2">Маринетти</span>
+									<span class="cursor header-bottom__img header-bottom__img-avangard-3">Малевич</span>
+									<span class="cursor header-bottom__img header-bottom__img-avangard-4">Пикассо</span>
 								</div>
 							</div>
 						</li>
@@ -247,21 +226,21 @@
 							</button>
 							<div class="header-bottom__option-container">
 								<div class="header-bottom__options" id="header-bottom__options-5">
-									<span class="header-bottom__img header-bottom__img-futurism-1">Карра</span>
-									<span class="header-bottom__img header-bottom__img-futurism-2">Прателла</span>
-									<span class="header-bottom__img header-bottom__img-futurism-3">Северини</span>
-									<span class="header-bottom__img header-bottom__img-futurism-4">Балла</span>
-									<span class="header-bottom__img header-bottom__img-futurism-1">Карра</span>
-									<span class="header-bottom__img header-bottom__img-futurism-2">Прателла</span>
-									<span class="header-bottom__img header-bottom__img-futurism-3">Северини</span>
-									<span class="header-bottom__img header-bottom__img-futurism-4">Балла</span>
+									<span class="cursor header-bottom__img header-bottom__img-futurism-1">Карра</span>
+									<span class="cursor header-bottom__img header-bottom__img-futurism-2">Прателла</span>
+									<span class="cursor header-bottom__img header-bottom__img-futurism-3">Северини</span>
+									<span class="cursor header-bottom__img header-bottom__img-futurism-4">Балла</span>
+									<span class="cursor header-bottom__img header-bottom__img-futurism-1">Карра</span>
+									<span class="cursor header-bottom__img header-bottom__img-futurism-2">Прателла</span>
+									<span class="cursor header-bottom__img header-bottom__img-futurism-3">Северини</span>
+									<span class="cursor header-bottom__img header-bottom__img-futurism-4">Балла</span>
 								</div>
 							</div>
 						</li>
 					</ul>
 					<div class="header-bottom__search search">
-						<button class="btn-reset cursor search__button search__button_bot" tabindex="-1">
-							<span class="search__icon" tabindex="-1"></span>
+						<button class="btn-reset cursor search__button search__button-bot">
+							<span class="search__icon"></span>
 						</button>
 						<form class="search__form" id="search__form_bot" onsubmit="return false" >
 							<input class="search__input" id="search__input_bot" autocomplete="off" type="search" placeholder="Поиск по сайту">
@@ -288,102 +267,6 @@
 		</section>
 		<section class="gallery">
 			<a id="gallery"></a>
-			<div class="modal" id="ex1">
-				<img class="modal__img"src="/img/gallery-1.jpg" alt="Картина Торс - Малевич Каземир">
-				<p class="modal__text">Картина Торс - Малевич Каземир</p>
-			</div>
-			<div class="modal" id="ex2">
-				<img class="modal__img"src="/img/gallery-2.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex3">
-				<img class="modal__img"src="/img/gallery-3.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex4">
-				<img class="modal__img"src="/img/gallery-4.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex5">
-				<img class="modal__img"src="/img/gallery-5.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex6">
-				<img class="modal__img"src="/img/gallery-6.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex7">
-				<img class="modal__img"src="/img/gallery-7.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex8">
-				<img class="modal__img"src="/img/gallery-8.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex9">
-				<img class="modal__img"src="/img/gallery-9.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex10">
-				<img class="modal__img"src="/img/gallery-10.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex11">
-				<img class="modal__img"src="/img/gallery-11.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex12">
-				<img class="modal__img"src="/img/gallery-12.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex13">
-				<img class="modal__img"src="/img/gallery-13.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex14">
-				<img class="modal__img"src="/img/gallery-14.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex15">
-				<img class="modal__img"src="/img/gallery-15.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex16">
-				<img class="modal__img"src="/img/gallery-16.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex17">
-				<img class="modal__img"src="/img/gallery-17.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex18">
-				<img class="modal__img"src="/img/gallery-18.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex19">
-				<img class="modal__img"src="/img/gallery-19.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex20">
-				<img class="modal__img"src="/img/gallery-20.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex21">
-				<img class="modal__img"src="/img/gallery-21.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex22">
-				<img class="modal__img"src="/img/gallery-22.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex23">
-				<img class="modal__img"src="/img/gallery-23.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
-			<div class="modal" id="ex24">
-				<img class="modal__img"src="/img/gallery-24.jpg" alt="">
-				<p class="modal__text">Lorem ipsum dolor sit amet.</p>
-			</div>
 			<div class="container gallery__container">
 				<div class="gallery__left">
 					<div class="gallery__left-top">
@@ -399,6 +282,318 @@
 						<a href="#" class="cursor main-text gallery__auth-link">авторизуйтесь</a>, либо воспользуйтесь лицензией.</p>
 				</div>
 				<div class="swiper gallery__swiper">
+					<div class="modal" id="ex1">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-1.jpg" alt="Торс">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Торс"</p>
+								<p class="main-text modal__years">1931-1932</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae temporibus impedit, ipsa numquam voluptates adipisci repellendus aliquid tempore obcaecati! Est libero velit perspiciatis! Suscipit doloribus distinctio repellendus. Assumenda, perferendis doloremque?</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex2">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-3.jpg" alt="Женщина с граблями">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Женщина с граблями"</p>
+								<p class="main-text modal__years">1931-1932</p>
+								<p class="main-text modal__descr">Картина из второй серии крестьянского цикла работ Казимира Малевича. Художник принялся за её создание в 1930-1931 годах, после того, как первый цикл был утерян после Берлинской и Варшавской выставок в 1927 году.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex3">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-2.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex4">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-4.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex5">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-5.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex6">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-6.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex7">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-7.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex8">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-8.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex9">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-9.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex10">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-10.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex11">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-11.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex12">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-12.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex13">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-13.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex14">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-14.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex15">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-15.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex16">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-16.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex17">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-17.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex18">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-18.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex19">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-19.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex20">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-20.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex21">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-21.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex22">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-22.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex23">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-23.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal" id="ex24">
+						<div class="modal__wrapper">
+							<div class="modal__left">
+								<img class="modal__img" src="/img/gallery-24.jpg" alt="">
+							</div>
+							<div class="modal__right">
+								<h3 class="modal__heading">Казимир Малевич</h3>
+								<p class="main-text modal__title">"Lorem"</p>
+								<p class="main-text modal__years">19**-19**</p>
+								<p class="main-text modal__descr">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores aut explicabo fugit exercitationem neque non, repellendus, molestias dolores sunt autem tempore illo eos voluptate quaerat deserunt debitis inventore quasi sequi.</p>
+							</div>
+						</div>
+					</div>
 					<div class="swiper-btns">
 						<!-- If we need navigation buttons -->
 						<div class="swiper-button-prev">
@@ -421,32 +616,32 @@
 					<!-- Additional required wrapper -->
 					<div class="swiper-wrapper">
 						<!-- Slides -->
-						<a href="#ex1" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-1">
+						<a href="#ex1" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-1">
 							<span class="swiper-slide-border"></span>
 						</a>
-						<a href="#ex2" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-2"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex3" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-3"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex4" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-4"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex5" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-5"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex6" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-6"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex7" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-7"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex8" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-8"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex9" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-9"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex10" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-10"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex11" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-11"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex12" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-12"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex13" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-13"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex14" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-14"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex15" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-15"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex16" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-16"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex17" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-17"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex18" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-18"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex19" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-19"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex20" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-20"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex21" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-21"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex22" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-22"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex23" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-23"><span class="swiper-slide-border"></span> </a>
-						<a href="#ex24" rel="modal:open" class="btn-reset cursor swiper-slide swiper-slide__img swiper-slide__img-gallery-24"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex3" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-2"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex2" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-3"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex4" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-4"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex5" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-5"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex6" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-6"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex7" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-7"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex8" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-8"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex9" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-9"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex10" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-10"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex11" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-11"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex12" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-12"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex13" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-13"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex14" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-14"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex15" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-15"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex16" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-16"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex17" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-17"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex18" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-18"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex19" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-19"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex20" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-20"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex21" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-21"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex22" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-22"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex23" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-23"><span class="swiper-slide-border"></span> </a>
+						<a href="#ex24" rel="modal:open" class="cursor swiper-slide swiper-slide-img swiper-slide-img-gallery-24"><span class="swiper-slide-border"></span> </a>
 					</div> 
 				</div>					
 			</div> 
@@ -456,7 +651,7 @@
 			<div class="container catalog__container">
 				<div class="catalog__top catalog-top">
 					<h2 class="second-heading catalog-top__heading">Каталог</h2>
-					<ul class="catalog-top__list">
+					<ul class="catalog-top__list tabs-country">
 						<li class="catalog-top__item">
 							<button class="btn-reset cursor tabs-country__btn" data-path="country-plug">
 								<picture class="catalog-top__img">
@@ -509,9 +704,9 @@
 						</li>
 					</ul>
 				</div>
-				<div class="tabs-country__content active" data-target="italy">
+				<div class="catalog-top-content active" data-target="italy">
 					<p class="main-text catalog__descr">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.</p>
-					<div class="catalog__bot catalog-bot">
+					<div class="catalog__bot catalog-bot tabs-artist">
 						<div class="catalog-bot__left catalog-bot-left tabs-artist__content active" data-target="artist-girlandayo">
 							<div class="catalog-bot-left__img-container">
 								<picture class="catalog-bot-left__img">
@@ -535,7 +730,7 @@
 							</div>
 							<h3 class="catalog-bot-left__heading">Что мы о нём знаем?</h3>
 							<div class="main-text catalog-bot-left__descr-plug">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</div>
-							<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+							<a href="#gallery" class="cursor catalog-bot-left__link flowing-scroll">В галерею</a>
 						</div>
 						<div class="catalog-bot__left catalog-bot-left tabs-artist__content" data-target="artist-plug">
 							<div class="catalog-bot-left__img-container">
@@ -545,7 +740,7 @@
 							</div>
 							<h3 class="catalog-bot-left__heading">Что мы о нём знаем?</h3>
 							<div class="main-text catalog-bot-left__descr-plug">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</div>
-							<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+							<a href="#gallery" class="cursor catalog-bot-left__link flowing-scroll">В галерею</a>
 						</div>
 
 						<div class="catalog-bot__right accordion-catalog" id="accordion">
@@ -561,76 +756,76 @@
 							</div>
 							<ul class="accordion-catalog__artists">
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Бенедетто ди Биндо</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Бенедетто ди Биндо</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Бергоньоне, Амброджо</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Бергоньоне, Амброджо</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Биссоло, Франческо</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Биссоло, Франческо</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Больтраффио, Джованни</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Больтраффио, Джованни</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Бонсиньори, Франческо</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Бонсиньори, Франческо</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Боттичини, Рафаэлло</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Боттичини, Рафаэлло</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Брамантино</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Брамантино</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Бреа, Людовико</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Бреа, Людовико</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Бьяджо д’Антонио Туччи</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Бьяджо д’Антонио Туччи</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Веккьетта</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Веккьетта</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Андреа Верроккьо</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Андреа Верроккьо</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-girlandayo">Доменико Гирландайо</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-girlandayo">Доменико Гирландайо</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Беноццо Гоццоли</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Беноццо Гоццоли</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Граначчи, Франческо</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Граначчи, Франческо</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Грегорио ди Чекко</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Грегорио ди Чекко</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Джованни да Удине</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Джованни да Удине</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Джованни ди Паоло</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Джованни ди Паоло</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Джорджоне</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Джорджоне</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Парентино, Бернардо</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Парентино, Бернардо</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Пезеллино</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Пезеллино</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Пьетро Перуджино</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Пьетро Перуджино</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Перуцци, Бальдассаре</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Перуцци, Бальдассаре</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Пизанелло</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Пизанелло</button>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<button class="btn-reset cursor main-text tabs-artist__btn" data-path="artist-plug">Пинтуриккьо</button>
+									<button class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Пинтуриккьо</button>
 								</li>
 							</ul>
 							<div class="accordion-catalog__top">
@@ -650,7 +845,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -670,7 +865,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -690,7 +885,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -710,7 +905,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -730,7 +925,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -750,13 +945,13 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="tabs-country__content" data-target="country-plug">
+				<div class="catalog-top-content" data-target="country-plug">
 					<p class="main-text catalog__descr">Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.</p>
 					<div class="catalog__bot catalog-bot">
 						<div class="catalog-bot__left catalog-bot-left">
@@ -770,7 +965,7 @@
 							</div>
 							<h3 class="catalog-bot-left__heading">Что мы о нём знаем?</h3>
 							<div class="main-text catalog-bot-left__descr-plug">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!</div>
-							<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+							<a href="#gallery" class="cursor catalog-bot-left__link flowing-scroll">В галерею</a>
 						</div>
 						<div class="catalog-bot__right accordion-catalog" id="accordion-plug">
 							<div class="accordion-catalog__top">
@@ -790,7 +985,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -810,7 +1005,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -830,7 +1025,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -850,7 +1045,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -870,7 +1065,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -890,7 +1085,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 							<div class="accordion-catalog__top">
@@ -910,7 +1105,7 @@
 								<div class="artists-not-ready__right">
 									<h5 class="artists-not-ready__heading">Здесь пока пусто</h5>
 									<p class="artists-not-ready__descr">А в галерее вы всегда можете найти что-то интересное для себя</p>
-									<a href="#gallery" class="cursor artists-not-ready__link">В галерею</a>
+									<a href="#gallery" class="cursor artists-not-ready__link flowing-scroll">В галерею</a>
 								</div>
 							</div>
 						</div>
@@ -927,8 +1122,9 @@
 						<ul class="events__list swiper-wrapper">
 							<li class="events__item swiper-slide">
 								<div class="events__item-top">
-									<picture>
-										<img class="events__img" src="/img/event-1.jpg" alt="Книжная гравюра в живом восприятии">
+									<picture class="events__img">
+										<source srcset="/img/event-1024-1.jpg" media=" (max-width: 1024px) ">
+										<img src="/img/event-1.jpg" alt="Книжная гравюра в живом восприятии">
 									</picture>
 								</div>
 								<div class="events__item-bottom">
@@ -941,8 +1137,9 @@
 							</li>
 							<li class="events__item swiper-slide">
 								<div class="events__item-top">
-									<picture>	
-										<img class="events__img" src="/img/event-2.jpg" alt="«Открытая дискуссия»">
+									<picture class="events__img">
+										<source srcset="/img/event-1024-2.jpg" media=" (max-width: 1024px) ">	
+										<img src="/img/event-2.jpg" alt="«Открытая дискуссия»">
 									</picture>
 								</div>
 								<div class="events__item-bottom">
@@ -955,8 +1152,9 @@
 							</li>
 							<li class="events__item swiper-slide">
 								<div class="events__item-top">
-									<picture>
-										<img class="events__img" src="/img/event-3.jpg" alt="Выставка «Формация 2020»">
+									<picture class="events__img">
+										<source srcset="/img/event-1024-3.jpg" media=" (max-width: 1024px) ">
+										<img src="/img/event-3.jpg" alt="Выставка «Формация 2020»">
 									</picture>
 								</div>
 								<div class="events__item-bottom">
@@ -969,8 +1167,9 @@
 							</li>
 							<li class="events__item swiper-slide">
 								<div class="events__item-top">
-									<picture>
-										<img class="events__img" src="/img/event-4.jpg" alt="XXIV Международная биеннале молодого искусства">
+									<picture class="events__img">
+										<source srcset="/img/event-1024-4.jpg" media=" (max-width: 1024px) ">
+										<img src="/img/event-4.jpg" alt="XXIV Международная биеннале молодого искусства">
 									</picture>
 								</div>
 								<div class="events__item-bottom">
@@ -983,8 +1182,9 @@
 							</li>
 							<li class="events__item swiper-slide">
 								<div class="events__item-top">
-									<picture>	
-									<img class="events__img" src="/img/event-5.jpg" alt="Джон Винзор. Фотографии из серии «Метафора серебра»">
+									<picture class="events__img">
+										<source srcset="/img/event-1024-5.jpg" media=" (max-width: 1024px) ">
+										<img src="/img/event-5.jpg" alt="Джон Винзор. Фотографии из серии «Метафора серебра»">
 									</picture>
 								</div>
 								<div class="events__item-bottom">
@@ -1008,7 +1208,7 @@
 		</section>
 		<section class="editions">
 			<a id="editions"></a>
-			<div class="container edition__container">
+			<div class="container editions__container">
 				<div class="editions__left">
 					<h2 class="second-heading editions__heading">Издания</h2>
 					<button class="sixth-heading btn-reset editions__category" aria-label="Категории">Категории</button>
@@ -1075,7 +1275,7 @@
 							<span class="editions__custom-checkbox"></span>
 						</label>
 					</form>
-					<h6 class="sixth-heading editions__price">Цена</h6>
+					<h4 class="sixth-heading editions__price">Цена</h4>
 					<form action="#" class="editions__form-price">
 						<span class="main-text editions__price-label cursor">От</span>
 						<input type="number" class="editions__price-input cursor" placeholder="50">
@@ -1103,7 +1303,7 @@
 							<li class="swiper-slide editions__item">
 								<img class="editions__item-img" src="/img/editions-1.jpg" alt="Искусство цвета">
 								<div class="editions__item-bot">
-									<h5 class="editions__item-heading">Искусство цвета </h5>
+									<h3 class="editions__item-heading">Искусство цвета </h3>
 									<div class="editions__item-descr">Иттен, Иоханнес</div>
 									<div class="editions__item-price">620 руб</div>
 									<button class="btn editions__item-btn cursor">Заказать</button>
@@ -1112,7 +1312,7 @@
 							<li class="swiper-slide editions__item">
 								<img class="editions__item-img" src="/img/editions-2.jpg" alt="Типографика">
 								<div class="editions__item-bot">
-									<h5 class="editions__item-heading">Типографика </h5>
+									<h3 class="editions__item-heading">Типографика </h3>
 									<div class="editions__item-descr">Рудер, Эмиль</div>
 									<div class="editions__item-price">2 450 руб</div>
 									<button class="btn editions__item-btn cursor">Заказать</button>
@@ -1121,7 +1321,7 @@
 							<li class="swiper-slide editions__item">
 								<img class="editions__item-img" src="/img/editions-3.jpg" alt="Книга про буквы">
 								<div class="editions__item-bot">
-									<h5 class="editions__item-heading">Книга про буквы </h5>
+									<h3 class="editions__item-heading">Книга про буквы </h3>
 									<div class="editions__item-descr"> Гордон, Юрий</div>
 									<div class="editions__item-price">2 200 руб</div>
 									<button class="btn editions__item-btn cursor">Заказать</button>
@@ -1130,7 +1330,7 @@
 							<li class="swiper-slide editions__item">
 								<img class="editions__item-img" src="/img/editions-4.jpg" alt="Николай Ильин">
 								<div class="editions__item-bot">
-									<h5 class="editions__item-heading">Николай Ильин</h5>
+									<h3 class="editions__item-heading">Николай Ильин</h3>
 									<div class="editions__item-descr" id="krichevskiy">Кричевский, Владимир</div>
 									<div class="editions__item-price">1 100 руб</div>
 									<button class="btn editions__item-btn cursor">Заказать</button>
@@ -1139,7 +1339,7 @@
 							<li class="swiper-slide editions__item">
 								<img class="editions__item-img" src="/img/editions-5.jpg" alt="Модульные сетки в графическом дизайне">
 								<div class="editions__item-bot">
-									<h5 class="editions__item-heading" id="net">Модульные сетки в граф... </h5>
+									<h3 class="editions__item-heading" id="net">Модульные сетки в граф... </h3>
 									<div class="editions__item-descr" id="muller">Мюллер-Брокманн, Йозеф</div>
 									<div class="editions__item-price">1 450 руб</div>
 									<button class="btn editions__item-btn cursor">Заказать</button>
@@ -1148,7 +1348,7 @@
 							<li class="swiper-slide editions__item">
 								<img class="editions__item-img" src="/img/editions-6.jpg" alt="Эволюция графических стилетй">
 								<div class="editions__item-bot">
-									<h5 class="editions__item-heading" id="graph">Эволюция графических ст...</h5>
+									<h3 class="editions__item-heading" id="graph">Эволюция графических ст...</h3>
 									<div class="editions__item-descr">Хеллер, Чваст</div>
 									<div class="editions__item-price">3 200 руб</div>
 									<button class="btn editions__item-btn cursor">Заказать</button>
@@ -1157,7 +1357,7 @@
 							<li class="swiper-slide editions__item">
 								<img class="editions__item-img" src="/img/editions-7.jpg" alt="Искусство и визуальное восприятие">
 								<div class="editions__item-bot">
-									<h5 class="editions__item-heading" id="visual">Искусство и визуальное в.. </h5>
+									<h3 class="editions__item-heading" id="visual">Искусство и визуальное в.. </h3>
 									<div class="editions__item-descr">Арнхейм, Рудольф</div>
 									<div class="editions__item-price">2 200 руб</div>
 									<button class="btn editions__item-btn cursor">Заказать</button>
@@ -1215,47 +1415,47 @@
 					<div class="swiper projects__swiper">
 						<ul class="swiper-wrapper projects__list">
 							<li class="swiper-slide projects__item">
-								<button class="projects__partner btn-reset cursor" aria-label="Freelands Foundation">
+								<button class="btn-reset projects__partner cursor" aria-label="Freelands Foundation">
 									<img class="projects__img" src="/img/projects-hover-1.jpg" alt="Freelands Foundation">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
-								<button class="projects__partner btn-reset cursor" aria-label="Institute for Contemporary art">
+								<button class="btn-reset projects__partner cursor" aria-label="Institute for Contemporary art">
 									<img class="projects__img" src="/img/projects-hover-2.jpg" alt="Institute for Contemporary art">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
-								<button class="projects__partner btn-reset cursor" aria-label="Workhouse Art center">
+								<button class="btn-reset projects__partner cursor" aria-label="Workhouse Art center">
 									<img class="projects__img" src="/img/projects-hover-3.jpg" alt="Workhouse Art center">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
-								<button class="projects__partner btn-reset cursor" aria-label="1849">
+								<button class="btn-reset projects__partner cursor" aria-label="1849">
 									<img class="projects__img" src="/img/projects-hover-4.jpg" alt="1849">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
-								<button class="projects__partner btn-reset cursor" aria-label="Hiscox">
+								<button class="btn-reset projects__partner cursor" aria-label="Hiscox">
 									<img class="projects__img" src="/img/projects-hover-5.jpg" alt="Hiscox">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
-								<button class="projects__partner btn-reset cursor" aria-label="Camden Arts center">
+								<button class="btn-reset projects__partner cursor" aria-label="Camden Arts center">
 									<img class="projects__img" src="/img/projects-hover-6.jpg" alt="Camden Arts center">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
-								<button class="projects__partner btn-reset cursor" aria-label="Stassen">
+								<button class="btn-reset projects__partner cursor" aria-label="Stassen">
 									<img class="projects__img" src="/img/projects-hover-7.jpg" alt="Stassen">
 								</button>
 							</li>
 							<li class="swiper-slide projects__item">
-								<button class="projects__partner btn-reset cursor" aria-label="Watts Gallery artists village">
+								<button class="btn-reset projects__partner cursor" aria-label="Watts Gallery artists village">
 									<img class="projects__img" src="/img/projects-hover-8.jpg" alt="Watts Gallery artists village">
 								</button>
-								<li class="swiper-slide projects__item">
 							</li>
-								<button class="projects__partner btn-reset cursor" aria-label="Esad">
+							<li class="swiper-slide projects__item">
+								<button class="btn-reset projects__partner cursor" aria-label="Esad">
 									<img class="projects__img" src="/img/projects-hover-9.jpg" alt="Esad">
 								</button>
 							</li>

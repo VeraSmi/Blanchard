@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
      })
   }
 
-  tabsActive('.tabs-country__btn', '.tabs-country__content');
-  tabsActive('.tabs-artist__btn', '.tabs-artist__content');
+  tabsActive('.tabs-country__btn', '.catalog-top-content');
+  tabsActive('.tabs-artist-btn', '.tabs-artist__content');
 
-  document.querySelectorAll('.tabs-artist__btn').forEach(function (click){
-    click.addEventListener('click', function () {
-      window.scrollTo(0, 3500)
-    })  
-  })
-
-
+  if (window.innerWidth <= 726) {
+    document.querySelectorAll('.tabs-artist-btn').forEach(function (click) {
+      click.addEventListener('click', function () {
+        window.scrollTo(0, 3500)
+      })  
+    })
+  }
 })

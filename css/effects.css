@@ -13,16 +13,36 @@
 
 /* hover */
 @media(min-width: 1025px) {
-	.header-top__link:hover, .header-top__link-enter:hover, .header-bottom__button:hover {
+	.header-top__link:hover:not(:focus-visible), .header-top__link-enter:hover:not(:focus-visible), .header-bottom__button:hover:not(:focus-visible) {
 		color: var(--heliotrope);
 	}
 
-	.header-top__link-enter:hover .header-top__icon-enter path {
+	.header-top__link-enter:hover:not(:focus-visible) .header-top__icon-enter path {
 		fill: var(--heliotrope);
 	}
 
-	.header-bottom__button:hover .header-bottom__button-icon path {
+	.header-bottom__button:hover:not(:focus-visible) .header-bottom__button-icon path {
 		stroke: var(--heliotrope)
+	}
+
+	.header-bottom__img {
+		position: relative;
+	}
+
+	.header-bottom__img::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border: 2px solid var(--amethyst);
+		opacity: 0;
+		transition: opacity .3s ease-in-out, border-color .3s ease-in-out;
+	}
+
+	.header-bottom__img:hover::after {
+		opacity: 1;
 	}
 
 	.search__form:hover .search__input {
@@ -53,9 +73,8 @@
 		stroke: var(--amethyst);
 }
 
-	.gallery__auth-link:hover:not(:active){
-		color: var(--royal-purple);
-		border-bottom: 1px solid var(--royal-purple);
+	.gallery__auth-link:hover:not(:active):not(:focus-visible){
+		border-bottom-color: var(--amethyst);
 	}
 
 	.gallery__swiper .swiper-slide:hover::before {
@@ -80,12 +99,11 @@
 		cursor: url(/img/cursor-black-hover.png), pointer;
 	}
 
-
 	.tabs-country__btn:hover:not(:active) .catalog-top__shadow::after{
 		opacity: 1;
 	}
 
-	.tabs-artist__btn::after {
+	.tabs-artist-btn::after {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -94,13 +112,14 @@
 		left: 0;
 		border-bottom: 1px solid var(--amethyst);
 		opacity: 0;
+		transition: opacity .3s ease-in-out;
 	}
 
-	.accordion-catalog__item:hover:not(:active) .tabs-artist__btn::after{ 
+	.accordion-catalog__item:hover:not(:active) .tabs-artist-btn::after{ 
 		opacity: 1;
 	}
 
-	.accordion-catalog__item:hover:not(:active) .tabs-artist__btn {
+	.accordion-catalog__item:hover:not(:active) .tabs-artist-btn {
 		color: var(--amethyst);
 	}
 
@@ -157,9 +176,8 @@
 		background-color: var(--biloba-flower);
 	}
 
-	.projects__link:hover:not(:active) {
-		color: var(--royal-purple);
-		border-bottom: 1px solid var(--royal-purple);
+	.projects__link:hover:not(:active):not(:focus-visible) {
+		border-bottom-color: var(--amethyst);
 	}
 
 	.projects__tooltip:hover svg{
@@ -184,8 +202,6 @@
 
 }
 
-
-
 /* focus-visible */
 .header-top__link::after, .header-top__link-enter::after, .header-bottom__button::before {
 	position: absolute;
@@ -198,6 +214,10 @@
 	background-color: var(--royal-purple);
 	opacity: 0;
 	transition: opacity .3s ease-out;
+}
+
+.header-bottom__img.focus-visible::after {
+	opacity: 1;
 }
 
 .hero__btn {
@@ -215,9 +235,17 @@
 	border: 2px solid var(--heliotrope);
 	border-radius: 100px;
 	opacity: 0;
+	transition: opacity .3s ease-out;
 }
 
-.header-top__link.focus-visible::after, 
+.header-top__link::after,
+.header-top__link-enter::after,
+.header-bottom__button::after, 
+.hero__btn::after {
+	transition: opacity .3s ease-in-out;
+}
+
+.header-top__link:focus-visible::after, 
 .header-top__link-enter.focus-visible::after, 
 .header-bottom__button.focus-visible::before,
 .hero__btn.focus-visible::after  {
@@ -238,7 +266,11 @@
 }
 
 .gallery__auth-link:focus-visible {
-	color: var(--biloba-flower);
+	color: var(--white);
+}
+
+.gallery__auth-link:focus-visible::before {
+	opacity: 1;
 }
 
 .gallery__swiper .swiper-slide.focus-visible .swiper-slide-border::before{
@@ -268,7 +300,7 @@
 	border-radius: 100px;
 }
 
-.tabs-artist__btn.focus-visible {
+.tabs-artist-btn.focus-visible {
 	color: var(--white);
 	background-color: var(--amethyst);
 }
@@ -321,7 +353,11 @@
 }
 
 .projects__link:focus-visible {
-	color: var(--biloba-flower);
+	color: var(--white);
+}
+
+.projects__link:focus-visible::before {
+	opacity: 1;
 }
 
 .projects__tooltip.focus-visible svg{
@@ -354,16 +390,36 @@ a:active {
 	cursor: url(/img/cursor-active.svg), pointer;
 }
 
-.header-top__link:active, .header-top__link-enter:active, .header-bottom__button:active {
+.header-top__link:active:not(:focus-visible), .header-top__link-enter:active:not(:focus-visible), .header-bottom__button:active:not(:focus-visible) {
 	color: var(--royal-purple);
 }
 
-.header-top__link-enter:active .header-top__icon-enter path {
+.header-top__link-enter:active:not(:focus-visible) .header-top__icon-enter path {
 	fill: var(--royal-purple);
 }
 
-.header-bottom__button:active .header-bottom__button-icon path {
+.header-bottom__button:active:not(:focus-visible) .header-bottom__button-icon path {
 	stroke: var(--royal-purple)
+}
+
+.header-bottom__img::before{
+	position: absolute;
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(194, 131, 243, 0.4);
+	opacity: 0;
+	transition: opacity .3s ease-in-out;
+}
+
+.header-bottom__img:active::before, .header-bottom__img:active::after {
+	opacity: 1;
+}
+
+.header-bottom__img:active::after {
+	border-color: var(--heliotrope);
 }
 
 .search__form:active .search__input {
@@ -391,8 +447,9 @@ a:active {
 	fill: var(--royal-purple);
 }
 
-.gallery__auth-link:hover:not(:active){
+.gallery__auth-link:active:not(:focus-visible){
 	color: var(--royal-purple);
+	border-bottom-color: var(--royal-purple);
 }
 
 .gallery__swiper .swiper-slide:active::after {
@@ -430,6 +487,7 @@ a:active {
 	border-radius: 100px;
 	box-shadow: 0 0 20px rgba(157, 92, 208, .7);
 	opacity: 0;
+	transition: opacity .3s ease-in-out;
 }
 
 .tabs-country__btn:active .catalog-top__designs::after {
@@ -439,10 +497,10 @@ a:active {
 .catalog-top__designs::before {
 	content: '';
 	position: absolute;
-	top: -8px;
-	right: -8px;
-	bottom: -8px;
-	left: -8px;
+	top: -10px;
+	right: -10px;
+	bottom: -10px;
+	left: -10px;
 	border: 2px solid var(--amethyst);
 	border-radius: 100px;
 	background-color: transparent;
@@ -453,7 +511,7 @@ a:active {
 		opacity: 1;
 }
 
-.tabs-artist__btn.active, .tabs-artist__btn:active {
+.tabs-artist-btn.active, .tabs-artist-btn:active {
 	color: var(--royal-purple);
 	border-bottom-color: transparent;
 }
@@ -509,8 +567,9 @@ a:active {
 	opacity: 1;
 }
 
-.projects__link:active {
+.projects__link:active:not(:focus-visible) {
 	color: var(--royal-purple);
+	border-bottom-color: var(--royal-purple);
 }
 
 .projects__tooltip:active svg{

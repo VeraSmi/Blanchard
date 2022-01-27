@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
 
     this.style.display = "none";
-  })
+  })  
 
   let mySwiper;
 

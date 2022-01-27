@@ -4,67 +4,44 @@ window.addEventListener("DOMContentLoaded", function() {
   
   im.mask(selector);
 
-  const form = document.querySelector('.contacts__left-form');
-
-  form.addEventListener('submit', formSend);
-
-
-  async function formSend(e) {
-    e.preventDefault();
-
-    let error = formValidate(form);
-  }
-
-
-  function formValidate(form) {
-    let error = 0;
-    let formReq = document.querySelectorAll('.contacts__left-form-input')
-
-    for(let i = 0; i < formReq.length; i++){
-      const input = formReq[i];
-      formRemoveError(input);
-
-      if(input.classList.contains('name')) {
-        if (nameTest(input)) {
-          formAddError(input);
-          error++;
-        } else if ( phoneTest(input) ) {
-            formAddError(input);
-            error++;
-          } else if(input.value === '') {
-              formAddError(input);
-              error++;
-            }
+  const charMatch = new RegExp('^[а-яА-Я]*$');
+  
+  new JustValidate('.contacts__left-form', {
+  rules: {
+    name: {
+      required: true,
+      minLength: 3,
+      maxLength: 30,
+      function: (name, value) => {
+        return charMatch.test(value)
+      }
+    },
+    tel: {
+      function: (name, value) => {
+        const phone = selector.inputmask.unmaskedvalue()
+        return Number(phone) && phone.length === 10
       }
     }
-    
-  }
+  },
+  messages: {
+    name: {
+      required: 'Как вас зовут?',
+      minLength: 'Имя не должно быть меньше 3-х символов',
+      maxLength: 'Имя не должно быть больше 30-ти символов',
+      function: 'Недопустимый формат'
+    },
+    tel: {
+      required: 'Укажите ваш телефон',
+      function: 'Недопустимый формат'},
+  },
 
+});
 
-  function formAddError(input) {
-    input.parentElement.classList.add('error');
-    input.classList.add('error');
-  }
+const form = document.querySelector('.contacts__left-form');
 
-  function formRemoveError(input) {
-    input.parentElement.classList.remove('error');
-    input.classList.remove('error');
-  }
-
-  function nameTest(input) {
-    // return ![a-zA-Zа-яА-Я].test(input.value);
-    return false;
-  }
-
-  function phoneTest(input) {
-    const phone = selector.inputmask.unmaskedvalue();
-    return !(Number(phone) && phone.length === 10);
-  }
-
-
-
-
-  
+form.addEventListener('submit', function(event){
+  event.preventDefault(); 
+});
 
 
 })

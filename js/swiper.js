@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     autoplay: {
       delay: 7000,
     },
+    speed: 4000,
   });
 
   const gallerySwiper = new Swiper(".gallery__swiper", {
