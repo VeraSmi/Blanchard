@@ -26,22 +26,35 @@ window.addEventListener("DOMContentLoaded", function() {
   messages: {
     name: {
       required: 'Как вас зовут?',
-      minLength: 'Имя не должно быть меньше 3-х символов',
-      maxLength: 'Имя не должно быть больше 30-ти символов',
+      minLength: 'Слишком короткое имя Слишком короткое имя Слишком короткое имя Слишком короткое имя',
+      maxLength: 'Слишком длинное имя',
       function: 'Недопустимый формат'
     },
     tel: {
       required: 'Укажите ваш телефон',
       function: 'Недопустимый формат'},
   },
+  submitHandler: function(form) {
 
+     let formData = new FormData(form);
+
+     let xhr = new XMLHttpRequest();
+
+     xhr.onreadystatechange = function(){
+       if (xhr.readyState === 4){
+         if (xhr.status === 200){
+           console.log('Отправлено');
+         }
+       }
+     }
+
+     xhr.open('POST', 'mail.php', true);
+     xhr.send(formData);
+     
+     form.reset();
+  }
 });
 
-const form = document.querySelector('.contacts__left-form');
-
-form.addEventListener('submit', function(event){
-  event.preventDefault(); 
-});
 
 
 })

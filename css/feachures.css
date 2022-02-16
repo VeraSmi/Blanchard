@@ -82,3 +82,42 @@
 .modal__years {
   color: #969696;
 }
+
+
+@media (max-width: 1024px){
+  .modal__right{
+    padding: 122px 50px 122px 49px
+  }
+}
+
+@media (max-width: 910px){
+  .modal__right{
+    padding: 122px 36px 122px 49px
+  }
+}
+
+@media (max-width: 725px){
+  .modal__wrapper {
+    flex-direction: column;
+  }
+
+  .modal__left {
+    width: 100%;
+  }
+
+  .modal__right {
+    margin-top: -3px;
+    padding: 17px 26px 21px 18px
+  }
+
+  .modal__title {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .modal__years {
+    margin-bottom: 12px;
+    line-height: 16px;
+  }
+}

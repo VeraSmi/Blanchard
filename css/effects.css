@@ -49,19 +49,9 @@
 		border-bottom-color: var(--heliotrope);
 	} 
 
-	.search__form:hover {
-		cursor: url(/img/cursor-hover.svg), pointer;
-	}
-
   .hero__btn:hover {
     border-color: var(--biloba-flower);
   }
-
-	.swiper-button-next:hover,
-	.swiper-button-prev:hover,
-	.gallery__swiper .swiper-slide:hover {
-		cursor: url(/img/cursor-hover.svg), pointer;
-}
 
 	.swiper-button-next:hover svg .background,
 	.swiper-button-prev:hover svg .background {
@@ -89,14 +79,6 @@
 		background-repeat: no-repeat;
 		outline: transparent;	
 		opacity: 1;
-	}
-
-	.catalog .cursor:hover {
-		cursor: url(/img/cursor-black-hover.png), pointer;
-	}
-
-	.events .cursor:hover {
-		cursor: url(/img/cursor-black-hover.png), pointer;
 	}
 
 	.tabs-country__btn:hover:not(:active) .catalog-top__shadow::after{
@@ -159,11 +141,7 @@
 		background-color: var(--amethyst);
 	}
 
-	.projects .cursor:hover {
-		cursor: url(/img/cursor-black-hover.png), pointer;
-	}
-
-	.projects__partner:hover {
+	.projects__partner:hover:not(:active) {
 		border-color: transparent;
 	}
 
@@ -180,12 +158,8 @@
 		border-bottom-color: var(--amethyst);
 	}
 
-	.projects__tooltip:hover svg{
-		fill: var(--biloba-flower)
-	}
-
-	.contacts .cursor:hover {
-		cursor: url(/img/cursor-black-hover.png), pointer;
+	.projects__tooltip:hover::before {
+		background-color: var(--biloba-flower);
 	}
 
 	.contacts__left-form-input:hover:not(:active) {
@@ -295,7 +269,6 @@
 	opacity: 1;
 }
 
-
 .catalog-top__img {
 	border-radius: 100px;
 }
@@ -317,7 +290,8 @@
 	opacity: 1;
 }
 
-.events__btn.focus-visible::before, .contacts__left-form-button.focus-visible::before {
+.events__btn.focus-visible::before, 
+.contacts__left-form-button.focus-visible::before {
 	opacity: 1;
 }
 
@@ -360,11 +334,11 @@
 	opacity: 1;
 }
 
-.projects__tooltip.focus-visible svg{
-	fill: var(--biloba-flower)
+.projects__tooltip.focus-visible::before {
+	background-color: var(--biloba-flower);
 }
 
-.contacts__left-form-input.focus-visible {
+.contacts__left-form-input.focus-visible:not(:active) {
 	background-color: #eaeaea;
 }
 
@@ -382,13 +356,6 @@
 }
 
 /* active */
-a:active {
-	cursor: url(/img/cursor-active.svg), pointer;
-}
-
-.btn:active, .btn-reset:active {
-	cursor: url(/img/cursor-active.svg), pointer;
-}
 
 .header-top__link:active:not(:focus-visible), .header-top__link-enter:active:not(:focus-visible), .header-bottom__button:active:not(:focus-visible) {
 	color: var(--royal-purple);
@@ -431,12 +398,6 @@ a:active {
 	border-color: var(--biloba-flower);
  }
 
-.swiper-button-next:active,
-.swiper-button-prev:active,
-.gallery__swiper .swiper-slide:active {
-	cursor: url(/img/cursor-active.svg), pointer;
-}
-
 .swiper-button-next:active svg .outline,
 .swiper-button-prev:active svg .outline {
 	stroke: var(--black);
@@ -454,14 +415,6 @@ a:active {
 
 .gallery__swiper .swiper-slide:active::after {
 	opacity: 1;
-}
-
-.catalog .cursor:active {
-	cursor: url(/img/cursor-black-active.png), pointer;
-}
-
-.events .cursor:active {
-	cursor: url(/img/cursor-black-active.png), pointer;
 }
 
 .catalog-top__designs::after {
@@ -525,18 +478,14 @@ a:active {
 }
 
 .events__btn:active, .contacts__left-form-button:active {
-	border: 3px solid var(--heliotrope);
+	border-color: var(--heliotrope);
 	background-color: var(--royal-purple);
 	color: var(--white);
 }
 
-.editions__label:active {
-	cursor: url(/img/cursor-active.svg), pointer;	
-}
-
 .editions__item-btn:active {
 	padding: 5.5px 15.5px;
-	border: 3px solid var(--biloba-flower);
+	border-color: var(--biloba-flower);
 }
 
 .editions__price-input:active {
@@ -548,10 +497,6 @@ a:active {
 .swiper-editions-button-next:active { 
 	border-color: var(--black);
 	background-color: var(--royal-purple);
-}
-
-.projects .cursor:active {
-	cursor: url(/img/cursor-black-active.png), pointer;
 }
 
 .projects__partner:active {
@@ -572,20 +517,16 @@ a:active {
 	border-bottom-color: var(--royal-purple);
 }
 
-.projects__tooltip:active svg{
-	fill: var(--amethyst)
+.projects__tooltip:active::before {
+ background-color: var(--amethyst);
 }
 
-.projects__tooltip:active svg .projects__tooltip-letter{
+.projects__tooltip:active path{
 	fill: var(--white)
 }
 
-.contacts .cursor:active {
-	cursor: url(/img/cursor-black-active.png), pointer;	
-}
-
-.contacts .contacts__left-form-input .cursor:active {
-	cursor: none;
+.contacts__left-form-input:active {
+	color: var(--black);
 }
 
 .contacts__left-link:active {
