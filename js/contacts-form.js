@@ -26,8 +26,8 @@ window.addEventListener("DOMContentLoaded", function() {
   messages: {
     name: {
       required: 'Как вас зовут?',
-      minLength: 'Слишком короткое имя Слишком короткое имя Слишком короткое имя Слишком короткое имя',
-      maxLength: 'Слишком длинное имя',
+      minLength: 'Имя должно быть длиннее 2 символов',
+      maxLength: 'Имя должно быть короче 30 символов',
       function: 'Недопустимый формат'
     },
     tel: {
