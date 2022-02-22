@@ -1803,12 +1803,14 @@ mark {
 
 .contacts__left-form-label {
 	position: relative;
+	display: flex;
+	flex-direction: column-reverse;
 	width: 100%;
 }
 
 .js-validate-error-label {
 	position: relative;
-	top: -85px;
+	top: 0;
 	font-family: 'OpenSans', 'sans-serif';
   font-size: 12px;
   line-height: 16px;
@@ -1827,12 +1829,16 @@ mark {
 	width: 88%;
 	border: 1px solid var(--grey-black);
 	border-radius: 100px;
-	color: var(--grey-black);
+	color: var(--black);
 	transition: background-color .3s ease-in-out, color .3s ease-in-out;;
 }
 
 .contacts__left-form-input::placeholder {
 	color: var(--light-grey);
+}
+
+.contacts__left-form-input:enabled {
+	background-color: transparent;
 }
 
 .contacts__left-form-button {
@@ -3385,11 +3391,16 @@ mark {
 		line-height: 32px;
 	}
 
-	.projects__partner  {
-		height: 61px;
+	.swiper-wrapper.projects__list {
+		height: 62px;
+	}
+
+	.projects__partner {
+		height: 100%;
 	}
 
 	.projects__swiper-container {
+		margin-bottom: 5px;
 		padding-left: 48px;
 		padding-right: 45px;
 	}
@@ -3411,7 +3422,7 @@ mark {
 	.contacts__left {
 		padding-top: 20px;
 		padding-right: 0;
-		padding-bottom: 27px;
+		padding-bottom: 25px;
 		width: calc(100% - 15px);
 		border-top: none;
 	}
@@ -3438,7 +3449,7 @@ mark {
 
 	.contacts__left-form {
 		margin-bottom: -22px;
-		padding-top: 14px;
+		padding-top: 16px;
 		width: 95%;
 	}
 
@@ -3478,7 +3489,7 @@ mark {
 
 	.footer {
 		padding-top: 21px;
-		padding-bottom: 13px;
+		padding-bottom: 16px;
 	}
 
 	.footer-container {
@@ -3486,7 +3497,7 @@ mark {
 	}
 
 	.footer__list {
-		margin-bottom: 20px;
+		margin-bottom: 16px;
 	}
 
 	.footer__link svg {

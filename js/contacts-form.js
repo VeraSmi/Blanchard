@@ -5,7 +5,7 @@ window.addEventListener("DOMContentLoaded", function() {
   im.mask(selector);
 
   const charMatch = new RegExp('^[а-яА-Я]*$');
-  
+
   new JustValidate('.contacts__left-form', {
   rules: {
     name: {
@@ -35,12 +35,13 @@ window.addEventListener("DOMContentLoaded", function() {
       function: 'Недопустимый формат'},
   },
   submitHandler: function(form) {
+    console.log('Отправлено1');
 
      let formData = new FormData(form);
 
      let xhr = new XMLHttpRequest();
 
-     xhr.onreadystatechange = function(){
+     xhr.onreadystatechange = function() {
        if (xhr.readyState === 4){
          if (xhr.status === 200){
            console.log('Отправлено');

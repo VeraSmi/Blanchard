@@ -338,7 +338,7 @@
 	background-color: var(--biloba-flower);
 }
 
-.contacts__left-form-input.focus-visible:not(:active) {
+.contacts__left-form-input.focus-visible {
 	background-color: #eaeaea;
 }
 
@@ -526,6 +526,11 @@
 }
 
 .contacts__left-form-input:active {
+	color: var(--black);
+	background-color: transparent;
+}
+
+.contacts__left-form-input:active::placeholder {
 	color: var(--black);
 }
 

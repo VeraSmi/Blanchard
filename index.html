@@ -1467,7 +1467,9 @@
 					<p class="main-text contacts__left-description">Леонтьевский переулок, дом 5/1</p>
 					<h4 class="contacts__left-form-heading contacts__second-heading">Заказать обратный звонок</h4>
 					<form action="mail.php" method="POST" class="contacts__left-form">
+						<input type="hidden" name="theme" value="Обратный звонок">
 						<input type="hidden" name="admin_email[]" value="kaminskaia.p.a@gmail.com">
+						<input type="hidden" name="form_subject" value="Заявка с сайта">
 						<label class="contacts__left-form-label">
 							<input class="main-text contacts__left-form-input cursor name" name="name" type="text" placeholder="Имя*" autocomplete="off" data-validate-field="name">
 						</label>
