@@ -35,7 +35,6 @@ window.addEventListener("DOMContentLoaded", function() {
       function: 'Недопустимый формат'},
   },
   submitHandler: function(form) {
-    console.log('Отправлено1');
 
      let formData = new FormData(form);
 

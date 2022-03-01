@@ -2,11 +2,12 @@ ymaps.ready(init);
 function init() {
     // Создание карты.
     var myMap = new ymaps.Map("map", {
-        center: [55.76290644196685,37.60469196238498],
-        // center: [55.75846806898367,37.60108849999989],
+        // center: [55.76290644196685,37.60469196238498],
+        center: [55.75846806898367,37.60108849999989],
         zoom: 15,
         controls: [],
     }); 
+
 
     myMap.controls.add('zoomControl', {
       size: 'small',

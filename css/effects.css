@@ -53,6 +53,12 @@
     border-color: var(--biloba-flower);
   }
 
+	.choices__inner:hover:not(:active),
+	.choices .choices__list--dropdown .choices__item--choice:hover { 
+		background-color: rgba(255, 255, 255, 0.2)!important;
+		color: var(--white)
+	}
+
 	.swiper-button-next:hover svg .background,
 	.swiper-button-prev:hover svg .background {
 		fill: var(--amethyst);
@@ -232,6 +238,12 @@
 
 .hero__btn.focus-visible::before {
 	opacity: 1;
+}
+
+.choices__inner.focus-visible:not(:active), 
+.choices .choices__list--dropdown .choices__item--choice.focus-visible {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: var(--white)
 }
 
 .swiper-button-next.focus-visible svg .outline,
