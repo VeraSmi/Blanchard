@@ -156,7 +156,8 @@
 }
 
 .ui-widget-content a {
-  color: var(--amethyst);
+  /* color: var(--amethyst); */
+  color: var(--grey-black);
 }
 
 .accordion-catalog__top:nth-child(3) {

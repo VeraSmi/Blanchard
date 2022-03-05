@@ -1614,7 +1614,6 @@ mark {
 	position: relative;
 	padding-left: 74px;
 	padding-right: 59px;
-	/* overflow: hidden; */
 }
 
 .swiper-wrapper.projects__list {
@@ -1639,13 +1638,12 @@ mark {
 	transition: border-color .3s ease-in-out;
 }
 
-
 .projects__img {
 	max-width: 90%;
 	filter: grayscale(100%);
 	opacity: .3;
 	pointer-events: none;
-	transition: filer .3s ease-in-out, opacity 1s ease-in-out;
+	transition: filter .3s ease-in-out, opacity 1s ease-in-out;
 }
 
 .swiper-projects__btns {
@@ -1744,8 +1742,6 @@ mark {
 	line-height: 16px;
   background-color: var(--amethyst);
   color: var(--white);
-	transition: background-color .3s ease-in-out;
-	
 }
 
 .tippy-box[data-theme~='amethyst'][data-placement^='top'] > .tippy-arrow::before {

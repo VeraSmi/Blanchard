@@ -22,11 +22,27 @@ document.addEventListener('DOMContentLoaded', function() {
   tabsActive('.tabs-country__btn', '.catalog-top-content');
   tabsActive('.tabs-artist-btn', '.tabs-artist__content');
 
-  if (window.innerWidth <= 726) {
+  const innerWidth = window.innerWidth;
+  const innerHeight = window.innerHeight;
+  console.log(innerWidth);
+  if (innerWidth <= 725) {
     document.querySelectorAll('.tabs-artist-btn').forEach(function (click) {
       click.addEventListener('click', function () {
-        window.scrollTo(0, 3500)
+        window.scrollTo(0, innerWidth*7)
       })  
     })
-  }
+  } else if (innerWidth <= 576) {
+    document.querySelectorAll('.tabs-artist-btn').forEach(function (click) {
+      click.addEventListener('click', function () {
+        window.scrollTo(0, innerWidth*9)
+      })  
+    })
+  } else if (innerWidth <= 400) {
+    document.querySelectorAll('.tabs-artist-btn').forEach(function (click) {
+      click.addEventListener('click', function () {
+        window.scrollTo(0, innerWidth*11)
+      })  
+    })
+  } 
+
 })
