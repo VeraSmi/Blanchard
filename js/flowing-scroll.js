@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if(dest !== undefined && dest !== '') { // проверяем существование
         $('html').animate({ 
           scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-        }, 3000 // скорость прокрутки
+        }, 1100 // скорость прокрутки
         );
     }
     return false;
@@ -18,10 +18,22 @@ document.addEventListener('DOMContentLoaded', function() {
       if(dest !== undefined && dest !== '') { // проверяем существование
           $('html').animate({ 
             scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-          }, 3000 // скорость прокрутки
+          }, 1100 // скорость прокрутки
           );
       }
       return false;
     });
-}
+  }
+
+if (innerWidth > 725) {
+  $('.tabs-artist-btn').on( 'click', function(){ 
+    return false;
+  });
+  }
+
+  $('.events__link').on( 'click', function(){ 
+    return false;
+  });
+  
+
 })

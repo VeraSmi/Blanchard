@@ -124,12 +124,13 @@
 		color: var(--white);
 	}
 
-	.editions__label:hover {
+	.editions__label-text:hover {
 		color: var(--heliotrope);
 	}
 
-	.editions__label:hover .editions__custom-checkbox {
+	.editions__label-text:hover .editions__custom-checkbox {
 		border-color: var(--heliotrope);
+
 	}
 
 	.editions__item-btn:hover {
@@ -145,10 +146,6 @@
 	.swiper-editions-button-next:hover {
 		border-color: var(--amethyst);
 		background-color: var(--amethyst);
-	}
-
-	.projects__partner:hover:not(:active) {
-		border-color: transparent;
 	}
 
 	.projects__partner:hover .projects__img {

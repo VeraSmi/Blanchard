@@ -379,7 +379,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .header-bottom__options {
-	height: 220px;
+	max-height: 220px;
 }
 
 .header-bottom__img {
@@ -1098,12 +1098,12 @@ mark {
 	max-height: 318px;
 }
 
-/* .accordion-catalog__artists {
-	column-count: 3;
-} */
-
 .accordion-catalog__item {
 	margin-right: 10px;
+}
+
+.tabs-artist-btn.active{
+	color: var(--amethyst);
 }
 
 .catalog .artists-not-ready {
@@ -1359,8 +1359,11 @@ mark {
 }
 
 .editions__label {
-	position: relative;
 	padding-left: 24px;
+}
+
+.editions__label-wrapper {
+	position: relative;
 }
 
 .editions__custom-checkbox {
@@ -2497,10 +2500,6 @@ mark {
 		padding-top: 50px;
 	}
 
-	/* .catalog-bot-left__img-container {
-		height: 419px;
-	} */
-
 	.artists-not-ready__img {
 		width: 271px;
 		height: 185px;
@@ -2528,12 +2527,6 @@ mark {
 	.events__item:not(:nth-child(-n+3)) {
 		display: flex;
 	}
-
-	/* .events__item-top {
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-	} */
 
 	.events__item:not(:nth-child(-n+2)) {
 		display: none;
@@ -3162,7 +3155,6 @@ mark {
 
 	.catalog-bot-left__img-container {
 		margin-bottom: 18px;
-		/* height: 181px; */
 	}
 	
 	.catalog-bot-left__heading {

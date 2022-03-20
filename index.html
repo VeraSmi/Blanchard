@@ -63,6 +63,7 @@
 	<script defer src="/js/contacts-form.js"></script>
 	<script defer src="/js/flowing-scroll.js"></script>
 	<script defer src="/js/modal.js"></script>
+	<script defer src="/js/prevent-default-form.js"></script>
 
 </head>
 
@@ -124,7 +125,7 @@
 						<button class="btn-reset cursor search__button search__button-top" aria-label="Открыть поиск">
 							<span class="search__icon"></span>
 						</button>
-						<form class="search__form" id="search__form_top" onsubmit="return false">
+						<form class="search__form" id="search__form_top" onsubmit="false">
 							<input class="search__input" id="search__input_top" autocomplete="off" type="search" placeholder="Поиск по сайту">
 						</form>
 						<button class="btn-reset cursor search__button-cross-sign" aria-label="Закрыть поиск">
@@ -145,16 +146,32 @@
 								</svg>
 							</button>
 							<div class="header-bottom__option-container">
-								<div class="header-bottom__options" id="header-bottom__options-1">
-									<span class="cursor header-bottom__img header-bottom__img-realism-1">Тинторетто</span>
-									<span class="cursor header-bottom__img header-bottom__img-realism-2">Фридрих</span>
-									<span class="cursor header-bottom__img header-bottom__img-realism-3">Леонардо</span>
-									<span class="cursor header-bottom__img header-bottom__img-realism-4">Верроккьо</span>
-									<span class="cursor header-bottom__img header-bottom__img-realism-1">Тинторетто</span>
-									<span class="cursor header-bottom__img header-bottom__img-realism-2">Фридрих</span>
-									<span class="cursor header-bottom__img header-bottom__img-realism-3">Леонардо</span>
-									<span class="cursor header-bottom__img header-bottom__img-realism-4">Верроккьо</span>
-								</div>
+								<ul class="header-bottom__options" id="header-bottom__options-1">
+									<li class="cursor header-bottom__img header-bottom__img-realism-1">
+										Тинторетто
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-realism-2">
+										Фридрих
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-realism-3">
+										Леонардо
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-realism-4">
+										Верроккьо
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-realism-1">
+										Тинторетто
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-realism-2">
+										Фридрих
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-realism-3">
+										Леонардо
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-realism-4">
+										Верроккьо
+									</li>
+								</ul>
 							</div>
 						</li>
 						<li class="header-bottom__item">
@@ -165,16 +182,32 @@
 								</svg>
 							</button>
 							<div class="header-bottom__option-container">
-								<div class="header-bottom__options" id="header-bottom__options-2">
-									<span class="cursor header-bottom__img header-bottom__img-impress-1">Моне</span>
-									<span class="cursor header-bottom__img header-bottom__img-impress-2">Сислей</span>
-									<span class="cursor header-bottom__img header-bottom__img-impress-3">Мане</span>
-									<span class="cursor header-bottom__img header-bottom__img-impress-4">Ренуар</span>
-									<span class="cursor header-bottom__img header-bottom__img-impress-1">Моне</span>
-									<span class="cursor header-bottom__img header-bottom__img-impress-2">Сислей</span>
-									<span class="cursor header-bottom__img header-bottom__img-impress-3">Мане</span>
-									<span class="cursor header-bottom__img header-bottom__img-impress-4">Ренуар</span>
-								</div>
+								<ul class="header-bottom__options" id="header-bottom__options-2">
+									<li class="cursor header-bottom__img header-bottom__img-impress-1">
+										Моне
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-impress-2">
+										Сислей
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-impress-3">
+										Мане
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-impress-4">
+										Ренуар
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-impress-1">
+										Моне
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-impress-2">
+										Сислей
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-impress-3">
+										Мане
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-impress-4">
+										Ренуар
+									</li>
+								</ul>
 							</div>
 						</li>
 						<li class="header-bottom__item">
@@ -185,16 +218,32 @@
 								</svg>
 							</button>
 							<div class="header-bottom__option-container">
-								<div class="header-bottom__options" id="header-bottom__options-3">
-									<span class="cursor header-bottom__img header-bottom__img-postimp-1">Ван Гог</span>
-									<span class="cursor header-bottom__img header-bottom__img-postimp-2">Сезанн</span>
-									<span class="cursor header-bottom__img header-bottom__img-postimp-3">Гоген</span>
-									<span class="cursor header-bottom__img header-bottom__img-postimp-4">Сёра</span>
-									<span class="cursor header-bottom__img header-bottom__img-postimp-1">Ван Гог</span>
-									<span class="cursor header-bottom__img header-bottom__img-postimp-2">Сезанн</span>
-									<span class="cursor header-bottom__img header-bottom__img-postimp-3">Гоген</span>
-									<span class="cursor header-bottom__img header-bottom__img-postimp-4">Сёра</span>
-								</div>
+								<ul class="header-bottom__options" id="header-bottom__options-3">
+									<li class="cursor header-bottom__img header-bottom__img-postimp-1">
+										Ван Гог
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-postimp-2">
+										Сезанн
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-postimp-3">
+										Гоген
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-postimp-4">
+										Сёра
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-postimp-1">
+										Ван Гог
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-postimp-2">
+										Сезанн
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-postimp-3">
+										Гоген
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-postimp-4">
+										Сёра
+									</li>
+								</ul>
 							</div>
 						</li>
 						<li class="header-bottom__item">
@@ -205,16 +254,32 @@
 								</svg>
 							</button>
 							<div class="header-bottom__option-container">
-								<div class="header-bottom__options" id="header-bottom__options-4">
-									<span class="cursor header-bottom__img header-bottom__img-avangard-1">Кандинский</span>
-									<span class="cursor header-bottom__img header-bottom__img-avangard-2">Маринетти</span>
-									<span class="cursor header-bottom__img header-bottom__img-avangard-3">Малевич</span>
-									<span class="cursor header-bottom__img header-bottom__img-avangard-4">Пикассо</span>
-									<span class="cursor header-bottom__img header-bottom__img-avangard-1">Кандинский</span>
-									<span class="cursor header-bottom__img header-bottom__img-avangard-2">Маринетти</span>
-									<span class="cursor header-bottom__img header-bottom__img-avangard-3">Малевич</span>
-									<span class="cursor header-bottom__img header-bottom__img-avangard-4">Пикассо</span>
-								</div>
+								<ul class="header-bottom__options" id="header-bottom__options-4">
+									<li class="cursor header-bottom__img header-bottom__img-avangard-1"
+									>Кандинский
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-avangard-2"
+									>Маринетти
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-avangard-3"
+									>Малевич
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-avangard-4"
+									>Пикассо
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-avangard-1"
+									>Кандинский
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-avangard-2"
+									>Маринетти
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-avangard-3"
+									>Малевич
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-avangard-4"
+									>Пикассо
+									</li>
+								</ul>
 							</div>
 						</li>
 						<li class="header-bottom__item">
@@ -225,16 +290,32 @@
 								</svg>
 							</button>
 							<div class="header-bottom__option-container">
-								<div class="header-bottom__options" id="header-bottom__options-5">
-									<span class="cursor header-bottom__img header-bottom__img-futurism-1">Карра</span>
-									<span class="cursor header-bottom__img header-bottom__img-futurism-2">Прателла</span>
-									<span class="cursor header-bottom__img header-bottom__img-futurism-3">Северини</span>
-									<span class="cursor header-bottom__img header-bottom__img-futurism-4">Балла</span>
-									<span class="cursor header-bottom__img header-bottom__img-futurism-1">Карра</span>
-									<span class="cursor header-bottom__img header-bottom__img-futurism-2">Прателла</span>
-									<span class="cursor header-bottom__img header-bottom__img-futurism-3">Северини</span>
-									<span class="cursor header-bottom__img header-bottom__img-futurism-4">Балла</span>
-								</div>
+								<ul class="header-bottom__options" id="header-bottom__options-5">
+									<li class="cursor header-bottom__img header-bottom__img-futurism-1"
+									>Карра
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-futurism-2"
+									>Прателла
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-futurism-3"
+									>Северини
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-futurism-4"
+									>Балла
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-futurism-1"
+									>Карра
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-futurism-2"
+									>Прателла
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-futurism-3"
+									>Северини
+									</li>
+									<li class="cursor header-bottom__img header-bottom__img-futurism-4"
+									>Балла
+									</li>
+								</ul>
 							</div>
 						</li>
 					</ul>
@@ -242,7 +323,7 @@
 						<button class="btn-reset cursor search__button search__button-bot">
 							<span class="search__icon"></span>
 						</button>
-						<form class="search__form" id="search__form_bot" onsubmit="return false" >
+						<form class="search__form" id="search__form_bot" onsubmit="false" >
 							<input class="search__input" id="search__input_bot" autocomplete="off" type="search" placeholder="Поиск по сайту">
 						</form>
 					</div>
@@ -790,7 +871,7 @@
 									<a href="#tabs-artist-btn-plug" class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Андреа Верроккьо</a>
 								</li>
 								<li class="main-text accordion-catalog__item">
-									<a href="#tabs-artist-btn" class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-girlandayo">Доменико Гирландайо</a>
+									<a href="#tabs-artist-btn" class="btn-reset cursor main-text tabs-artist-btn active" data-path="artist-girlandayo">Доменико Гирландайо</a>
 								</li>
 								<li class="main-text accordion-catalog__item">
 									<a href="#tabs-artist-btn-plug" class="btn-reset cursor main-text tabs-artist-btn" data-path="artist-plug">Беноццо Гоццоли</a>
@@ -1212,69 +1293,93 @@
 					<h2 class="second-heading editions__heading">Издания</h2>
 					<button class="sixth-heading btn-reset editions__category" aria-label="Категории">Категории</button>
 					<form action="#" class="editions__form-category">
-						<label for="bestseller" class="main-text editions__label cursor">
+						<div class="editions__label-wrapper">
+							<label for="bestseller" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="bestseller">
 							<span class="editions__label-text">Бестселлеры</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="art" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+							<label for="art" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="art">
 							<span class="editions__label-text">Искусство</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="architecture" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+							<label for="architecture" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="architecture">
 							<span class="editions__label-text">Архитектура</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="design" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+							<label for="design" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="design">
 							<span class="editions__label-text">Дизайн</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="fashion" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+							<label for="fashion" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="fashion">
 							<span class="editions__label-text">Мода</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="kids" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+							<label for="kids" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="kids">
 							<span class="editions__label-text">Детям</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="fiction" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+						<lab	el for="fiction" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden" id="fiction">
 							<span class="editions__custom-checkbox"></span>
 							<span class="editions__label-text">Художественная
-							 литература</span>
+							 	литература</span>
+							 </div>
 						</label>
-						<label for="publicism" class="main-text editions__label cursor">
+						<div class="editions__label-wrapper">
+							<label for="publicism" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="publicism">
 							<span class="editions__label-text">Публицистика</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="guide" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+							<label for="guide" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="guide">
 							<span class="editions__label-text">Путеводители</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="filisophy" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+							<label for="filisophy" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="filisophy">
 							<span class="editions__label-text">Философия</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="study" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+							<label for="study" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="study">
 							<span class="editions__label-text">Учебная литература </span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
-						<label for="magazines" class="main-text editions__label cursor">
+							</label>
+						</div>
+						<div class="editions__label-wrapper">
+							<label for="magazines" class="main-text editions__label cursor">
 							<input type="checkbox" class="editions__checkbox visually-hidden"  id="magazines">
 							<span class="editions__label-text">Журналы и газеты</span>
 							<span class="editions__custom-checkbox"></span>
-						</label>
+							</label>
+						</div>
 					</form>
-					<h4 class="sixth-heading editions__price">Цена</h4>
+					<p class="sixth-heading editions__price">Цена</p>
 					<form action="#" class="editions__form-price">
 						<span class="main-text editions__price-label cursor">От</span>
 						<input type="number" class="editions__price-input cursor" placeholder="50">
