@@ -676,6 +676,13 @@ mark {
 	height: calc((100% - 50px) / 2);
 }
 
+.swiper-slide-img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	object-position: center;
+  }
+
  .gallery__swiper .swiper-slide-border::before {
 	content: "";
 	position: absolute;
@@ -797,111 +804,6 @@ mark {
 .swiper-pagination-fraction {
 	width: auto;
 	text-align: center;
-}
-
-.swiper-slide-img {
-	object-fit: cover;
-  width: 100%;
-  height: 100%;
-  object-position: center;
-	background: center center no-repeat transparent;
-	background-size: cover;
-}
-
-.swiper-slide-img-gallery-1 {
-	background-image: url('/img/gallery-1.jpg')
-}
-
-.swiper-slide-img-gallery-2 {
-	background-image: url('/img/gallery-2.jpg')
-}
-
-.swiper-slide-img-gallery-3 {
-	background-image: url('/img/gallery-3.jpg')
-}
-
-.swiper-slide-img-gallery-4 {
-	background-image: url('/img/gallery-4.jpg')
-}
-
-.swiper-slide-img-gallery-5 {
-	background-image: url('/img/gallery-5.jpg')
-}
-
-.swiper-slide-img-gallery-6 {
-	background-image: url('/img/gallery-6.jpg')
-}
-
-.swiper-slide-img-gallery-7 {
-	background-image: url('/img/gallery-7.jpg')
-}
-
-.swiper-slide-img-gallery-8 {
-	background-image: url('/img/gallery-8.jpg')
-}
-
-.swiper-slide-img-gallery-9 {
-	background-image: url('/img/gallery-9.jpg')
-}
-
-.swiper-slide-img-gallery-10 {
-	background-image: url('/img/gallery-10.jpg')
-}
-
-.swiper-slide-img-gallery-11 {
-	background-image: url('/img/gallery-11.jpg')
-}
-
-.swiper-slide-img-gallery-12 {
-	background-image: url('/img/gallery-12.jpg')
-}
-
-.swiper-slide-img-gallery-13 {
-	background-image: url('/img/gallery-13.jpg')
-}
-
-.swiper-slide-img-gallery-14 {
-	background-image: url('/img/gallery-14.jpg')
-}
-
-.swiper-slide-img-gallery-15 {
-	background-image: url('/img/gallery-15.jpg')
-}
-
-.swiper-slide-img-gallery-16 {
-	background-image: url('/img/gallery-16.jpg')
-}
-
-.swiper-slide-img-gallery-17 {
-	background-image: url('/img/gallery-17.jpg')
-}
-
-.swiper-slide-img-gallery-18 {
-	background-image: url('/img/gallery-18.jpg')
-}
-
-.swiper-slide-img-gallery-19 {
-	background-image: url('/img/gallery-19.jpg')
-}
-
-.swiper-slide-img-gallery-20 {
-	background-image: url('/img/gallery-20.jpg')
-}
-
-.swiper-slide-img-gallery-21 {
-	background-image: url('/img/gallery-21.jpg')
-}
-
-.swiper-slide-img-gallery-22 {
-	background-image: url('/img/gallery-22.jpg')
-}
-
-.swiper-slide-img-gallery-23 {
-	background-image: url('/img/gallery-23.jpg')
-}
-
-.swiper-slide-img-gallery-24 {
-	background-image: url('/img/gallery-24.jpg')
 }
 
 .choices .choices__list .choices__item.is-selected  {
@@ -1607,7 +1509,7 @@ mark {
 }
 
 .projects__partner-heading {
-	margin-bottom: 17px;
+	margin-bottom: 24px;
 	font-weight: 600;
 	font-size: 24px;
 	line-height: 32px;
@@ -1635,8 +1537,7 @@ mark {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: calc(100% - 2px);
-	height: 159px;
+	height: 148px;
 	border: 1px solid var(--grey-accordion);
 	transition: border-color .3s ease-in-out;
 }
@@ -2086,10 +1987,6 @@ mark {
 
 	.accordion-catalog__artists {
 		max-height: 428px;
-	}
-
-	.projects__partner {
-		width: calc(100% - 7px);
 	}
 
 	.contacts__left {
@@ -2981,102 +2878,6 @@ mark {
 		height: 100%;
 	}
 
-	.swiper-slide-img-gallery-1 {
-		background-image: url('/img/gallery-320-1.jpg')
-	}
-
-	.swiper-slide-img-gallery-2 {
-		background-image: url('/img/gallery-320-2.jpg')
-	}
-	
-	.swiper-slide-img-gallery-3 {
-		background-image: url('/img/gallery-320-3.jpg')
-	}
-	
-	.swiper-slide-img-gallery-4 {
-		background-image: url('/img/gallery-320-4.jpg')
-	}
-	
-	.swiper-slide-img-gallery-5 {
-		background-image: url('/img/gallery-320-5.jpg')
-	}
-	
-	.swiper-slide-img-gallery-6 {
-		background-image: url('/img/gallery-320-6.jpg')
-	}
-	
-	.swiper-slide-img-gallery-7 {
-		background-image: url('/img/gallery-320-7.jpg')
-	}
-	
-	.swiper-slide-img-gallery-8 {
-		background-image: url('/img/gallery-320-8.jpg')
-	}
-	
-	.swiper-slide-img-gallery-9 {
-		background-image: url('/img/gallery-320-9.jpg')
-	}
-	
-	.swiper-slide-img-gallery-10 {
-		background-image: url('/img/gallery-320-10.jpg')
-	}
-	
-	.swiper-slide-img-gallery-11 {
-		background-image: url('/img/gallery-320-11.jpg')
-	}
-	
-	.swiper-slide-img-gallery-12 {
-		background-image: url('/img/gallery-320-12.jpg')
-	}
-	
-	.swiper-slide-img-gallery-13 {
-		background-image: url('/img/gallery-320-13.jpg')
-	}
-	
-	.swiper-slide-img-gallery-14 {
-		background-image: url('/img/gallery-320-14.jpg')
-	}
-	
-	.swiper-slide-img-gallery-15 {
-		background-image: url('/img/gallery-320-15.jpg')
-	}
-	
-	.swiper-slide-img-gallery-16 {
-		background-image: url('/img/gallery-320-16.jpg')
-	}
-	
-	.swiper-slide-img-gallery-17 {
-		background-image: url('/img/gallery-320-17.jpg')
-	}
-	
-	.swiper-slide-img-gallery-18 {
-		background-image: url('/img/gallery-320-18.jpg')
-	}
-	
-	.swiper-slide-img-gallery-19 {
-		background-image: url('/img/gallery-320-19.jpg')
-	}
-	
-	.swiper-slide-img-gallery-20 {
-		background-image: url('/img/gallery-320-20.jpg')
-	}
-	
-	.swiper-slide-img-gallery-21 {
-		background-image: url('/img/gallery-320-21.jpg')
-	}
-	
-	.swiper-slide-img-gallery-22 {
-		background-image: url('/img/gallery-320-22.jpg')
-	}
-	
-	.swiper-slide-img-gallery-23 {
-		background-image: url('/img/gallery-320-23.jpg')
-	}
-	
-	.swiper-slide-img-gallery-24 {
-		background-image: url('/img/gallery-320-24.jpg')
-	}
-	
 	.choices .choices__inner {
 		width: calc(100% - 24px);
 	} 
@@ -3422,7 +3223,7 @@ mark {
 	}
 
 	.projects__partner {
-		height: 100%;
+		height: 60px;
 	}
 
 	.projects__swiper-container {

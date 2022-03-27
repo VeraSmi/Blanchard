@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
         grid: {
           rows: 1
         },
-        spaceBetween: 0
+        spaceBetween: 5
       },
       726: {
         slidesPerView: 2,
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       1200: {
         slidesPerView: 3,
-        spaceBetween: 38
+        spaceBetween: 62
       }
     },
 
